@@ -22,7 +22,23 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ElectronicCash.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ElectronicCash.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ElectronicCash.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0041.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_2302.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_0041.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0041.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_2302.uml">

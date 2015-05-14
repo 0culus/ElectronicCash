@@ -16,6 +16,12 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="45f01d6e-80e7-4a18-9e15-2a089a3cdd3f">
+      <profileInstance
+        Id="5a8a4ff8-32b5-43dd-9fe0-efacd157b190"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -29,6 +35,12 @@
         Id="bdd4271e-6de6-4516-ae38-ca3750f5a9c1"
         LastKnownName="ElectronicCash"
         LastKnownLocation="Package1_2302.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b086f22a-6601-415e-9cd9-27924495affc"
+        LastKnownName="System"
+        LastKnownLocation="Package_0041.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
