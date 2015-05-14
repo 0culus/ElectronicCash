@@ -25,6 +25,7 @@ namespace ElectronicCash
             Money = 1000;
             PersonalData = personalData;
             PersonalDataBytes = Helpers.GetBytes(personalData);
+            Ledger = new Dictionary<Guid, List<MoneyOrder>>();
         }
 
         /// <summary>
@@ -34,7 +35,6 @@ namespace ElectronicCash
         {
             Amount = amount;
             MoneyOrders = new List<MoneyOrder>();
-            Guid transactionId = new Guid();
 
             // for testing only
             Random rnd = new Random();
@@ -52,8 +52,8 @@ namespace ElectronicCash
                 MoneyOrders.Add(currentMoneyOrder);
             }
 
-            // store the transaction for later reference
-            Ledger.Add(transactionId, MoneyOrders);
+            // store the transaction for later reference with a unique id
+            Ledger.Add(new Guid(), MoneyOrders);
         }
 
         #region private methods
