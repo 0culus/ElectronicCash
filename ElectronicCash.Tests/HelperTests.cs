@@ -35,6 +35,16 @@ namespace ElectronicCash.Tests
             Assert.IsNotNull(result);
         }
 
+        [Test]
+        public void GetStringGivenBytes_ShouldYieldSameString()
+        {
+            string test = "ThisIsAnAwesomeString";
+            byte[] result = Helpers.GetBytes(test);
+            string fromBytes = Helpers.GetString(result);
+
+            Assert.AreEqual(fromBytes, test);
+        }
+
         [STAThread]
         private static void Main()
         {
