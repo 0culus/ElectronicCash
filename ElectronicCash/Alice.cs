@@ -24,7 +24,7 @@ namespace ElectronicCash
             ActorGuid = actorGuid;
             Money = 1000;
             PersonalData = personalData;
-            PersonalDataBytes = GetBytes(personalData);
+            PersonalDataBytes = Helpers.GetBytes(personalData);
         }
 
         /// <summary>
@@ -46,6 +46,7 @@ namespace ElectronicCash
                 rnd.NextBytes(testBytes);
                 var uniquenessString = new Guid();
                 //var idPairs = CreateIdStringPairs(PersonalDataBytes);
+                // TODO: once done testing, change back to use our personal data
                 var idPairs = CreateIdStringPairs(testBytes);
                 var currentMoneyOrder = new MoneyOrder(Amount.ToString(), uniquenessString.ToByteArray(), idPairs);
                 MoneyOrders.Add(currentMoneyOrder);
@@ -78,30 +79,6 @@ namespace ElectronicCash
 
             return pairs;
         } 
-
-        /// <summary>
-        /// stackoverflow.com/questions/472906/converting-a-string-to-byte-array-without-using-an-encoding-byte-by-byte
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private static byte[] GetBytes(string str)
-        {
-            byte[] bytes = new byte[str.Length * sizeof(char)];
-            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
-            return bytes;
-        }
-
-        /// <summary>
-        /// stackoverflow.com/questions/472906/converting-a-string-to-byte-array-without-using-an-encoding-byte-by-byte
-        /// </summary>
-        /// <param name="bytes"></param>
-        /// <returns></returns>
-        private static string GetString(byte[] bytes)
-        {
-            char[] chars = new char[bytes.Length / sizeof(char)];
-            System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
-            return new string(chars);
-        }
 
         #endregion
     }
