@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ElectronicCash
 {
+    /// <summary>
+    /// Contains all our helper methods to help keep our classes cleaner,
+    /// and make unit testing possible
+    /// </summary>
     public static class Helpers
     {
         /// <summary>
