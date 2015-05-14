@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ElectronicCash">
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 8.5" name="ElectronicCash">
   <logicalClassDesignerModelMoniker Id="1973b9d5-b9c7-40bf-8fba-5a9622b97bb9" />
   <nestedChildShapes>
     <classShape Id="5607ca29-8f6b-4978-bd7b-1487a015c728" absoluteBounds="2.625, 1, 2.875, 1.8284605995814007" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
@@ -29,6 +29,13 @@
       <nestedChildShapes>
         <AttributeElementListCompartment Id="bd9deaa3-7997-457f-9b83-9d944214b2c1" absoluteBounds="7.14, 2.2653356393178306, 2.4699999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="eabf57a1-3017-4276-b237-4a7a84fbb17e" absoluteBounds="7.14, 2.4765075068672497, 2.4699999999999998, 0.521484357615312" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3b41657-4317-44f5-8703-5ea99104c4ec" absoluteBounds="6, 4.125, 5.75, 1.6683043545484551" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="db72a836-f0e0-423f-968b-7dce51e8b3e8" LastKnownName="MoneyOrder" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="06ef7746-9c71-40b1-9c82-fc1dac0faacb" absoluteBounds="6.015, 4.64033563931783, 5.7200000000000006, 0.68164060264825832" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="b488feaf-2aa2-4579-86d3-78056c02d415" absoluteBounds="6.015, 5.331976241966089, 5.7200000000000006, 0.36132811258236575" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

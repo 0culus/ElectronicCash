@@ -1237,6 +1237,354 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="db72a836-f0e0-423f-968b-7dce51e8b3e8" name="MoneyOrder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="1ff0161a-3a17-4722-8e28-b96c89ab4cab" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder" tag="ViewCode">
+            <elementDefinition Id="cd4b63ae-9059-4a5d-aa82-78ad3332036b" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="6e19da99-0c36-4430-ac95-4cede50772e3" name="class" profile="CSharpProfile">
+            <elementDefinition Id="ef46a2d5-a684-4723-8b76-a777e83b28ff" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="462c2dcf-91c4-45a8-9e30-634eb78175d8">
+                <propertyInstance Id="3b7ade70-befb-43de-99ed-1680ab9483ec" name="ClrAttributes">
+                  <elementDefinition Id="417fca0a-8868-40f4-8483-faad6d38f8d8" />
+                </propertyInstance>
+                <elementDefinition Id="47029f43-6c54-4969-9c5f-bd896005def0" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="52b8cf39-461b-41d8-a3f8-42e9ced9562e">
+                <propertyInstance Id="103d7d13-4551-4b63-bccf-8e2867fd82ff" name="IsPartial" value="false">
+                  <elementDefinition Id="5cd434e1-67d5-4b6e-aa95-d2643f6bb07f" />
+                </propertyInstance>
+                <elementDefinition Id="42313088-c315-4a62-b17d-7cf8795920f2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="ca92f5c1-08a3-4253-811f-35ac2c18b489">
+                <propertyInstance Id="b6c5e4bb-aba2-468c-955b-cbd2acafaeb0" name="IsStatic" value="False">
+                  <elementDefinition Id="f6bb4528-8c22-480a-8a12-b2ca9a312582" />
+                </propertyInstance>
+                <elementDefinition Id="9d931b03-0339-496b-bd3b-613cede4b83c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="96af13a7-b944-4007-9292-4ffd3641f185">
+                <propertyInstance Id="2aada933-a4e1-4391-a50c-6164bc0591c9" name="IsUnsafe" value="false">
+                  <elementDefinition Id="9ebd0092-e97a-4602-946b-e37549e5103a" />
+                </propertyInstance>
+                <elementDefinition Id="d1afef86-0404-4446-9189-b9fc6ccf258b" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="8ac0417e-3063-4a71-b64c-aef62328cc8a">
+                <propertyInstance Id="191044bb-5688-43ff-b88f-707239458ea9" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="b2f2af12-57cd-4318-bde0-12b63788661f" />
+                </propertyInstance>
+                <elementDefinition Id="b15925a4-e627-4883-9bed-81a79864bded" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="a7d35bd3-5637-4742-bb2b-5ac97b3494e8" />
+        <ownedAttributesInternal>
+          <property Id="e5be5a0e-6a40-467e-8004-14327b0d6e85" name="Amount" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="81297628-1ef7-4ff9-8eb8-ccad2442b352" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3DAmount" tag="ViewCode">
+                <elementDefinition Id="8165891a-374c-4032-ae5c-8af098a91af4" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f1a3d504-cc03-4335-a97d-11cf532630fc" name="property" profile="CSharpProfile">
+                <elementDefinition Id="809b680f-2755-4110-beb2-76f4f40a2db5" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="206d7b86-8536-426f-bf76-e36992be613e">
+                    <propertyInstance Id="9e839c14-cb91-4b11-8125-e2ee08ddea47" name="ClrAttributes">
+                      <elementDefinition Id="d0769e2c-d888-41bc-976b-06ceaa4b3e5f" />
+                    </propertyInstance>
+                    <elementDefinition Id="1061fe18-1b70-4105-935b-f4fd9287edd8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cecab80e-9538-48b9-a6ca-687fd4e51e84">
+                    <propertyInstance Id="d5b8e832-0e48-4074-97e1-c06368976495" name="Get" value="public">
+                      <elementDefinition Id="769e58ba-499f-4255-93d3-f5391d236cad" />
+                    </propertyInstance>
+                    <elementDefinition Id="0e7930e7-d8ee-4f4d-8623-90b6291a284a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e5334ae6-475b-4b32-a1e0-37969db643ff">
+                    <propertyInstance Id="88098bc3-5bd6-4352-9486-da95fe2da812" name="HasBody" value="false">
+                      <elementDefinition Id="bf109dd5-b121-41d2-bd25-0265b53b4df1" />
+                    </propertyInstance>
+                    <elementDefinition Id="223c989b-39e3-461f-929f-4d2db4afbef0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8a527837-807d-4282-9721-0b9a4a5a5148">
+                    <propertyInstance Id="a4ae869a-82f9-4be5-9e8d-b408856a134c" name="IsUnsafe" value="false">
+                      <elementDefinition Id="103abbc0-41df-4b99-b7df-b1603835454b" />
+                    </propertyInstance>
+                    <elementDefinition Id="82c8b0ad-ead7-4528-99f5-fa50adb433cc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="11372bf4-b63f-4fbd-805b-5622ff4ed0d9">
+                    <propertyInstance Id="3c8f672c-70f5-43af-80db-43f5d2f5f8c6" name="Inheritance" value="none">
+                      <elementDefinition Id="4f8357be-b0b9-4560-bb77-244ed15f0575" />
+                    </propertyInstance>
+                    <elementDefinition Id="527fc374-5640-4301-8a55-76089207a143" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b1bbf3a8-3b14-43ef-904d-80dbe49bc71c">
+                    <propertyInstance Id="1f74bace-fe81-4041-80e1-55e1a733f349" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="2ee25ef5-df30-40b1-8426-580e4ca8d066" />
+                    </propertyInstance>
+                    <elementDefinition Id="2807b24a-e318-4868-b178-b5cc8cadcb57" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="18accd71-639d-493e-b31c-02345b7c588e">
+                    <propertyInstance Id="9c0d2372-8554-417b-921a-9b7e303637a2" name="Set" value="public">
+                      <elementDefinition Id="7f036fc3-ea3d-45dc-9502-ff9430faf303" />
+                    </propertyInstance>
+                    <elementDefinition Id="14ad1a1a-8eb4-4640-87ce-6eaf18b215d6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="78578213-94b9-4505-b34e-bf056427238c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4f24e053-c934-41cd-b4de-9e43126db8d4" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="322846e9-16cc-4a95-90e5-08731de74b4d" name="NIdPairs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="f183be6a-f331-4890-aa9c-8a5fe2fedffd" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3DNIdPairs" tag="ViewCode">
+                <elementDefinition Id="5979cdd6-22cb-4cbd-87bb-c5af91818e95" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="95a9ed0c-4e42-4786-bdff-8aa8677ba1b0" name="property" profile="CSharpProfile">
+                <elementDefinition Id="b72ab989-db84-42ca-958e-2ac9cbe99d72" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2b8b8745-591b-4fba-b2e2-8ebce8800040">
+                    <propertyInstance Id="3e052dee-35a4-4d60-90d8-4573dc29a29b" name="ClrAttributes">
+                      <elementDefinition Id="808d531d-8be3-47d7-8fad-757a162b11ed" />
+                    </propertyInstance>
+                    <elementDefinition Id="b7ccc1e1-7241-496e-8f6b-697b5cfde034" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9df7d7d5-424c-4e5d-abb8-67be82c2fa13">
+                    <propertyInstance Id="873c6a91-cae1-401f-bbf4-f7148e593c6b" name="Get" value="public">
+                      <elementDefinition Id="be18d1d2-723e-4147-bf48-479757895c06" />
+                    </propertyInstance>
+                    <elementDefinition Id="68f3db49-b3f6-4b4c-9daa-7a5b03e420df" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fecae071-b6dd-46d1-8b14-21117fd99a70">
+                    <propertyInstance Id="e3f4d1cf-ae2a-4f63-9428-263156cc09ee" name="HasBody" value="false">
+                      <elementDefinition Id="7b78a2ed-e1c6-49e9-adeb-164cba007afa" />
+                    </propertyInstance>
+                    <elementDefinition Id="87936177-c4a7-4d5d-a673-5ef5b3916206" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a60d6abe-e29b-4c4b-accd-bcae5c2c8261">
+                    <propertyInstance Id="09f3e89b-7040-495b-881a-2da749cd27c6" name="IsUnsafe" value="false">
+                      <elementDefinition Id="07b66f72-84fb-46dd-b1ef-21c23aef2ab4" />
+                    </propertyInstance>
+                    <elementDefinition Id="ef3d656a-76e5-4c3f-92e1-64c5ca4a2f27" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="847cb057-0b54-4ff6-8aa5-602395c86c8d">
+                    <propertyInstance Id="3704463a-a131-44e5-bb25-902ebc9b31d5" name="Inheritance" value="none">
+                      <elementDefinition Id="5cfbd9e1-21c1-4c7f-a5b3-f377b2cabb9c" />
+                    </propertyInstance>
+                    <elementDefinition Id="6c3697d4-41d0-4553-a1bb-a60c2c2adeb6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6477d29a-8c2a-4a2c-8ca4-f4cc147e67ff">
+                    <propertyInstance Id="03bc68e0-3385-478e-9f8d-0bbd377a2b49" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="64b998aa-b55a-457b-9dea-2ce249de8260" />
+                    </propertyInstance>
+                    <elementDefinition Id="913898c3-7089-485a-a728-557786422600" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0c4cd4c6-128b-4891-ac29-857874539405">
+                    <propertyInstance Id="8e7550be-1e82-4124-b936-e3a743345d6a" name="Set" value="public">
+                      <elementDefinition Id="084dda43-dd97-47eb-91f5-90378d93d2f6" />
+                    </propertyInstance>
+                    <elementDefinition Id="0801ce76-5fab-4918-b113-861aa43046d9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="529ba174-7ffa-4121-a0d5-e9cc688a010a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9239e9a5-5022-442e-b2e8-4daa516f74da" LastKnownName="List&lt;IdentityStringPair‎&lt;Byte‎[]‎&gt;‎&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="9219cd70-b92e-437e-9a3e-1f79487e71dc" name="UniquenessString" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="12603dbf-0634-4a38-acbb-cd222455f7d6" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3DUniquenessString" tag="ViewCode">
+                <elementDefinition Id="f67ddbf8-6ed6-444c-aaf0-691c808f3d33" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="9b1de814-5d49-40f6-b377-34f30013131e" name="property" profile="CSharpProfile">
+                <elementDefinition Id="191ae5a3-3a8e-4035-9c13-a5a2426c93cc" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="df9fe16f-b28c-4628-8fe7-758e65b76669">
+                    <propertyInstance Id="49016f18-313e-4025-9a06-1259bb06d473" name="ClrAttributes">
+                      <elementDefinition Id="6a9cb975-112e-4abe-a9c2-565585177b2d" />
+                    </propertyInstance>
+                    <elementDefinition Id="cd9cbf83-2beb-4afc-8ada-97ede5660f12" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5ee0ae7b-7358-4095-a99b-2bc8d0d8364d">
+                    <propertyInstance Id="c9272b28-ed7d-4aa2-b594-e10467846aaf" name="Get" value="public">
+                      <elementDefinition Id="1c7d9b2e-3b2c-4ab6-bdf7-6fa10e93aa52" />
+                    </propertyInstance>
+                    <elementDefinition Id="79c204bc-e635-46af-9880-deb85dce57a9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="17bc0618-7d7f-4c9f-abdf-5dd5cb2a6963">
+                    <propertyInstance Id="8721e0ea-70ee-49db-8176-f3a945374f32" name="HasBody" value="false">
+                      <elementDefinition Id="f226b96a-3ffc-4c18-ad61-45f793f710d1" />
+                    </propertyInstance>
+                    <elementDefinition Id="a01cd554-7336-4eea-a031-341c08c2eb1d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="09ec1467-9710-4bb3-b2b0-c38f7d9d0964">
+                    <propertyInstance Id="bc1da162-0c9f-4baf-8b91-fdc1d08d973d" name="IsUnsafe" value="false">
+                      <elementDefinition Id="c61245c2-807e-4a04-b2ee-1a1c9d059609" />
+                    </propertyInstance>
+                    <elementDefinition Id="40751719-7a85-4a3f-a099-1405a8a0c8e5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b5509f88-5812-49ab-9ed6-ff7ac6e842ff">
+                    <propertyInstance Id="203c85e9-b949-4cf5-8fc3-4f83cb7953c2" name="Inheritance" value="none">
+                      <elementDefinition Id="902ea05b-adca-4c9a-a929-56c9dea2ac9d" />
+                    </propertyInstance>
+                    <elementDefinition Id="878114e8-2d92-46f7-ada4-f94d7645afc7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b2ffb54e-ef65-4334-850e-c425ab3d69f9">
+                    <propertyInstance Id="af93f494-dc2b-4bf0-be98-88229182106b" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="a114011e-5084-4097-8905-c42a51c72a42" />
+                    </propertyInstance>
+                    <elementDefinition Id="da1aa274-8920-4f3d-af95-e3f1f4ba3149" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a6d4df24-cc12-465a-b5a2-0aaf88afc3bd">
+                    <propertyInstance Id="a572f3bb-6081-41de-ba1f-d0b31daa617b" name="Set" value="public">
+                      <elementDefinition Id="3fb78864-1984-4bb5-9d7a-703629d483b7" />
+                    </propertyInstance>
+                    <elementDefinition Id="9a718e2e-306e-4158-926b-8f6ac4eb9e42" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString Id="ab1941a8-6dd5-4d0e-ab76-5352d757e6af" name="Lower" value="*">
+                <elementDefinition Id="53ed11d0-d2f5-4fe6-8c41-54ee0a7aeec5" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="2ecee904-d446-4893-87f2-3cc07fb641e0" name="Upper" value="*">
+                <elementDefinition Id="c1c95ec4-c653-490a-bb2f-b0dd73c5dda6" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="4be9b4c1-1b12-4eb1-a059-6ecccd1c8d52" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="653116e1-5b3a-47ad-b938-952d190931b7" LastKnownName="Byte" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="4f573da6-0156-48f3-967f-f37ea32c9434" name="MoneyOrder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2ea367bd-c0c4-4443-9e77-e79b5429c65c" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3D(Name%3DIdentityStringPair GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]))]))])" tag="ViewCode">
+                <elementDefinition Id="5da337da-20b1-42bd-bf7e-ebb7878c6f09" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="26eb9c7a-8c6c-4c04-ba8c-1b0343e878f1" name="method" profile="CSharpProfile">
+                <elementDefinition Id="85280694-e266-499e-8b36-8e2fc421e9f0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="285216d8-4c17-4d9f-a88d-4b4370390aec">
+                    <propertyInstance Id="9bdf11a9-1a44-405b-84d2-15549373a289" name="ClrAttributes">
+                      <elementDefinition Id="e3b784d6-4da0-4443-ae95-735a0b7d038b" />
+                    </propertyInstance>
+                    <elementDefinition Id="59c17f1f-badc-474a-8685-f6f25352b9ed" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c1028601-9e2b-499c-9666-8bcd04e3c577">
+                    <propertyInstance Id="c2fd1e32-2e96-4042-985e-d973084e4492" name="IsPartial" value="false">
+                      <elementDefinition Id="b9a3771c-95c1-4e74-9c1a-15b6dab8cb95" />
+                    </propertyInstance>
+                    <elementDefinition Id="336d0066-9568-470a-b54e-5fd339014689" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b568a6f3-c56a-46bb-b2c1-4cd1c0b54ec5">
+                    <propertyInstance Id="d4c05f25-1d1b-4b09-87f8-e1c8bc31bc39" name="IsUnsafe" value="false">
+                      <elementDefinition Id="479edd43-75ba-4f64-860c-07e6fd4f81db" />
+                    </propertyInstance>
+                    <elementDefinition Id="4bd07257-256b-4fcb-894a-a4fb77449626" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="98cd992a-093c-437d-979f-e67bb3eb6c45">
+                    <propertyInstance Id="95315c52-056e-44e1-8507-1466b385dfd8" name="Inheritance" value="none">
+                      <elementDefinition Id="5d3660d8-c4ea-4e66-b2aa-256547bcb2e1" />
+                    </propertyInstance>
+                    <elementDefinition Id="109c4921-b8aa-401f-827c-767ce3b4b116" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="05b4a88c-bcbc-4ef8-8bb4-37c79e777275">
+                    <propertyInstance Id="241124d5-2568-4763-9e11-50c37f89036d" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="acbe062c-36a5-4bf2-bc2c-faa659412cbb" />
+                    </propertyInstance>
+                    <elementDefinition Id="b14cb6fe-f3a4-42d4-9f1a-8d16713c8ef8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f6b667ef-12d2-4912-8296-418d64e36c37">
+                    <propertyInstance Id="11341c46-aca5-4091-b261-355cfa400e97" name="params" value="false">
+                      <elementDefinition Id="64847622-c772-4164-b186-c510b4ff2ac4" />
+                    </propertyInstance>
+                    <elementDefinition Id="14718f51-2148-4e51-8735-a1bf339732df" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="273ad1dd-2e3a-4f65-95d7-c572e2820a3d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bd4c5a10-7c79-4c49-8499-0703f1ff2e17" name="_amount" direction="In">
+                  <referencesInternal>
+                    <reference Id="3d1797e3-b7bb-4ef6-8149-6d7e9f9cb1af" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3D(Name%3DIdentityStringPair GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]))]))]) ParameterIdentifier%3D_amount" tag="ViewCode">
+                      <elementDefinition Id="4d434e27-e6a9-471e-a46e-a6c188ddb626" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="bbe0b198-7fa6-4c49-91fd-906d4128586a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4f24e053-c934-41cd-b4de-9e43126db8d4" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="74f59b4b-6b65-4eef-9501-bdced750068a" name="uniquenessString" direction="In" isOrdered="true">
+                  <referencesInternal>
+                    <reference Id="76038ebf-191b-451f-9a4f-63bcd8c4b726" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3D(Name%3DIdentityStringPair GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]))]))]) ParameterIdentifier%3DuniquenessString" tag="ViewCode">
+                      <elementDefinition Id="e0254cea-51d6-4300-8440-f06670c55980" />
+                    </reference>
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString Id="feb44537-dcf0-4ef3-96a5-1488ee4ebf5f" name="Lower" value="*">
+                      <elementDefinition Id="271a9c95-3877-4e10-91a1-3b02c02bba22" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2b338fe2-a3bc-4ed0-8f28-31ccb3ac4a30" name="Upper" value="*">
+                      <elementDefinition Id="e1f7a3ab-20bd-40c2-9d60-9d42b3be7d29" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7cd19fbe-f0c1-40de-a88a-c82a92a8de28" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="653116e1-5b3a-47ad-b938-952d190931b7" LastKnownName="Byte" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8af023fa-6cfc-41e0-aa1e-1a9e71dd7133" name="nIdPairs" direction="In">
+                  <referencesInternal>
+                    <reference Id="93d65a39-7067-4219-8981-eec170335ae1" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3DMoneyOrder Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fkhan%2FDocuments%2FGitHub%2FElectronicCash%2FElectronicCash%2Fbin%2FDebug%2FElectronicCash.exe Namespace%3DElectronicCash Type%3D(Name%3DIdentityStringPair GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DByte ArrayRank%3D1 ParentType%3DByte))]))]))]) ParameterIdentifier%3DnIdPairs" tag="ViewCode">
+                      <elementDefinition Id="c2039489-ad72-4b74-8a4f-72ebc484cbb4" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="6741c22f-dc36-43fe-85d5-733577a3ac61" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9239e9a5-5022-442e-b2e8-4daa516f74da" LastKnownName="List&lt;IdentityStringPair‎&lt;Byte‎[]‎&gt;‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9239e9a5-5022-442e-b2e8-4daa516f74da" name="List&lt;IdentityStringPair‎&lt;Byte‎[]‎&gt;‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ElectronicCash.Models::System::Collections::Generic::List&lt;IdentityStringPair‎&lt;Byte‎[]‎&gt;‎&gt;">
+        <elementDefinition Id="0f9b904f-817a-4dd4-8c00-819a21d67704" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="afd4bd52-f974-45d9-b68f-121e3bea7bf4" name="ElectronicCash.Models">
     <elementDefinition Id="12e4ccbf-1bd3-4599-966a-a422a470b86b" />
