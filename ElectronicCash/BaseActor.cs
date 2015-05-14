@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace ElectronicCash
 {
+    /// <summary>
+    /// The base actor abstracts all common properties of our actors (mainly Bank, Merchant, Customer)
+    /// </summary>
     public abstract class BaseActor
     {
         public string Name { get; set; }
         public Guid ActorGuid { get; set; }
+        public Int32 Money { get; set; }
+        public Dictionary<Guid, List<MoneyOrder>> Ledger { get; private set; }
     }
 }
