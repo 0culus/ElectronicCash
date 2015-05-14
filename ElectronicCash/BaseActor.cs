@@ -14,6 +14,6 @@ namespace ElectronicCash
         public string Name { get; set; }
         public Guid ActorGuid { get; set; }
         public Int32 Money { get; set; }
-        public Dictionary<Guid, List<MoneyOrder>> Ledger { get; private set; }
+        public Dictionary<Guid, List<MoneyOrder>> Ledger { get; protected set; }
     }
 }
