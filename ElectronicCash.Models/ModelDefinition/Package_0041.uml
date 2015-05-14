@@ -127,5 +127,17 @@
         </appliedStereotypesInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b2cc117a-deba-449e-a81d-175622f2409d"
+        LastKnownName="ComponentModel"
+        LastKnownLocation="Package_1250.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e3d66225-f2aa-40c8-a10c-4797bc824992"
+        LastKnownName="Windows"
+        LastKnownLocation="Package1_1250.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>
