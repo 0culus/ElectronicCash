@@ -11,9 +11,9 @@ namespace ElectronicCash
     /// </summary>
     public abstract class BaseActor
     {
-        public string Name { get; set; }
-        public Guid ActorGuid { get; set; }
-        public Int32 Money { get; set; }
+        public string Name { get; protected set; }
+        public Guid ActorGuid { get; protected set; }
+        public Int32 Money { get; protected set; }
         public Dictionary<Guid, List<MoneyOrder>> Ledger { get; protected set; }
     }
 }
