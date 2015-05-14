@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +43,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(349, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Electronic Cash Protocol #6";
+            this.label1.Text = "Electronic Cash Protocol #4";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(19, 91);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -50,6 +58,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(754, 553);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
@@ -62,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 
