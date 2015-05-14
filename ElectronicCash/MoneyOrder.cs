@@ -9,6 +9,7 @@ namespace ElectronicCash
     /// <summary>
     /// holds the data for a money order
     /// </summary>
+    [Serializable]
     public class MoneyOrder
     {
         public string Amount { get; set; }
@@ -16,12 +17,12 @@ namespace ElectronicCash
         public List<IdentityStringPair<Byte[]>> NIdPairs { get; set; }
 
         public MoneyOrder(string _amount,
-            byte[] _uniquenessString,
-            List<IdentityStringPair<Byte[]>> _nIDPairs)
+            byte[] uniquenessString,
+            List<IdentityStringPair<byte[]>> nIdPairs)
         {
             Amount = _amount;
-            UniquenessString = _uniquenessString;
-            NIdPairs = _nIDPairs;
+            UniquenessString = uniquenessString;
+            NIdPairs = nIdPairs;
         }
     }
 }
