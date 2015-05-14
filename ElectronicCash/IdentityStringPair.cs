@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace e_cash
+namespace ElectronicCash
 {
     [Serializable]
     public struct IdentityStringPair<T> : IEnumerable<T>
