@@ -6,43 +6,17 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-05-14T00:41:48" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ba236583-aa6f-415d-9661-a5883f339a96' -  (ClassifierTemplateParameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'c36fe5dc-bc3c-483b-a23c-d7fa89097342' -  (ClassifierTemplateParameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash' -  (Package)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Medium" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice' -  (Class)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Alice' -  (Operation)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Alice::actorGuid' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Alice::name' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Alice::numOrders' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Alice::personalData' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::Amount' -  (Property)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::CreateIdStringPairs' -  (Operation)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::CreateIdStringPairs::personalDataBytes' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::CreateMoneyOrders' -  (Operation)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::CreateMoneyOrders::amount' -  (Parameter)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::MoneyOrders' -  (Property)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::NumOrders' -  (Property)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::PersonalData' -  (Property)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Alice::PersonalDataBytes' -  (Property)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::BaseActor' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::IdentityStringPair' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::IdentityStringPair&lt;Byte‎[]‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::MoneyOrder' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System' -  (Package)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Byte' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Collections' -  (Package)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Collections::Generic' -  (Package)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Collections::Generic::List&lt;IdentityStringPair‎&lt;Byte‎[]‎&gt;‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Collections::Generic::List&lt;MoneyOrder‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Guid' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ElectronicCash.Models::ElectronicCash::Alice to ElectronicCash.Models::System::Collections::Generic::List&lt;MoneyOrder‎&gt; (Association)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ElectronicCash.Models::ElectronicCash::Alice to ElectronicCash.Models::System::Byte (Association)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ElectronicCash.Models::ElectronicCash::Alice to ElectronicCash.Models::ElectronicCash::BaseActor (Generalization)" />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="High" Text="(1) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="High" Text="(9) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
-  <Message Timestamp="2015-05-14T00:41:50" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash' -  (Package)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Medium" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Helpers' -  (Class)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Helpers::GetBytes' -  (Operation)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Helpers::GetBytes::str' -  (Parameter)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Helpers::GetString' -  (Operation)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::ElectronicCash::Helpers::GetString::bytes' -  (Parameter)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System' -  (Package)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ElectronicCash.Models::System::Byte' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="High" Text="(1) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-05-14T01:22:17" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>
