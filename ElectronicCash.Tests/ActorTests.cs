@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace ElectronicCash.Tests
 {
     [TestFixture]
-    class Program
+    class ActorTests
     {
         [Test]
         static void Main(string[] args)
