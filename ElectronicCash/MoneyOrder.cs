@@ -11,7 +11,17 @@ namespace ElectronicCash
     /// </summary>
     public class MoneyOrder
     {
-        public Byte[] UniquenessString { get; set; }
+        public string Amount { get; set; }
+        public byte[] UniquenessString { get; set; }
+        public List<IdentityStringPair<Byte[]>> NIdPairs { get; set; }
 
+        public MoneyOrder(string _amount,
+            byte[] _uniquenessString,
+            List<IdentityStringPair<Byte[]>> _nIDPairs)
+        {
+            Amount = _amount;
+            UniquenessString = _uniquenessString;
+            NIdPairs = _nIDPairs;
+        }
     }
 }
