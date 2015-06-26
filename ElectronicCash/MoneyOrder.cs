@@ -14,7 +14,7 @@ namespace ElectronicCash
     {
         public string Amount { get; set; }
         public byte[] UniquenessString { get; set; }
-        public List<IdentityStringPair<Byte[]>> NIdPairs { get; set; }
+        public List<IdentityStringPair<byte[]>> NIdPairs { get; set; }
 
         public MoneyOrder(string _amount,
             byte[] uniquenessString,

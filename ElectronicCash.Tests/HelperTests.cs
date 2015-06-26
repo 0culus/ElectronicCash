@@ -10,6 +10,8 @@ namespace ElectronicCash.Tests
     [TestFixture]
     internal class HelperTests
     {
+        const string Test = "ThisIsAnAwesomeString";
+
         [Test]
         public void DummyTest()
         {
@@ -19,8 +21,7 @@ namespace ElectronicCash.Tests
         [Test]
         public void GetBytesGivenString_ShouldYieldNonNullByteArray()
         {
-            string test = "ThisIsAnAwesomeString";
-            byte[] result = Helpers.GetBytes(test);
+            var result = Helpers.GetBytes(Test);
 
             Assert.IsNotNull(result);
         }
@@ -30,7 +31,7 @@ namespace ElectronicCash.Tests
         {
             var rnd = new Random();
             var testBytes = new byte[10];
-            string result = Helpers.GetString(testBytes);
+            var result = Helpers.GetString(testBytes);
 
             Assert.IsNotNull(result);
         }
@@ -38,11 +39,10 @@ namespace ElectronicCash.Tests
         [Test]
         public void GetStringGivenBytes_ShouldYieldSameString()
         {
-            string test = "ThisIsAnAwesomeString";
-            byte[] result = Helpers.GetBytes(test);
-            string fromBytes = Helpers.GetString(result);
+            var result = Helpers.GetBytes(Test);
+            var fromBytes = Helpers.GetString(result);
 
-            Assert.AreEqual(fromBytes, test);
+            Assert.AreEqual(fromBytes, Test);
         }
 
         [STAThread]
