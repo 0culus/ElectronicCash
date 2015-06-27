@@ -13,11 +13,11 @@ namespace ElectronicCash
         public byte[] UniquenessString { get; set; }
         public List<IdentityStringPair<byte[]>> NIdPairs { get; set; }
 
-        public MoneyOrder(string _amount,
+        public MoneyOrder(string amount,
             byte[] uniquenessString,
             List<IdentityStringPair<byte[]>> nIdPairs)
         {
-            Amount = _amount;
+            Amount = amount;
             UniquenessString = uniquenessString;
             NIdPairs = nIdPairs;
         }
