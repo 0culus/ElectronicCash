@@ -12,7 +12,7 @@ namespace ElectronicCash
         /// stackoverflow.com/questions/472906/converting-a-string-to-byte-array-without-using-an-encoding-byte-by-byte
         /// </summary>
         /// <param name="str"></param>
-        /// <returns></returns>
+        /// <returns />
         public static byte[] GetBytes(string str)
         {
             var bytes = new byte[str.Length * sizeof(char)];
@@ -24,7 +24,7 @@ namespace ElectronicCash
         /// stackoverflow.com/questions/472906/converting-a-string-to-byte-array-without-using-an-encoding-byte-by-byte
         /// </summary>
         /// <param name="bytes"></param>
-        /// <returns></returns>
+        /// <returns />
         public static string GetString(byte[] bytes)
         {
             var chars = new char[bytes.Length / sizeof(char)];

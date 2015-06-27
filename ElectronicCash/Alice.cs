@@ -35,12 +35,12 @@ namespace ElectronicCash
             MoneyOrders = new List<MoneyOrder>();
 
             // for testing only
-            Random rnd = new Random();
+            var rnd = new Random();
             // for testing only
 
-            for (int i = 0; i < NumOrders; i++)
+            for (var i = 0; i < NumOrders; i++)
             {
-                byte[] testBytes = new byte[10];
+                var testBytes = new byte[10];
                 rnd.NextBytes(testBytes);
                 var uniquenessString = new Guid();
                 //var idPairs = CreateIdStringPairs(PersonalDataBytes);
@@ -68,7 +68,7 @@ namespace ElectronicCash
             var pairs = new List<IdentityStringPair<byte[]>>();
 
             // this loop for testing purposes only
-            for (int i = 0; i < NumOrders; i++)
+            for (var i = 0; i < NumOrders; i++)
             {
                 var reverse = personalDataBytes.Reverse().ToArray();
                 var newPair = new IdentityStringPair<byte[]>(personalDataBytes, reverse);
