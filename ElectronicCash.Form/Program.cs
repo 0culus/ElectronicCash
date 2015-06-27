@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ElectronicCash
+namespace ElectronicCash.Form
 {
     static class Program
     {
