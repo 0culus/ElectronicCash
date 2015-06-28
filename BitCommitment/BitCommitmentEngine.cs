@@ -10,8 +10,8 @@ namespace BitCommitment
     {
         #region properties
 
-        public Byte[] BobRandBytesR { get; set; }
-        public Byte[] AliceEncryptedMessage { get; set; }
+        public byte[] BobRandBytesR { get; set; }
+        public byte[] AliceEncryptedMessage { get; set; }
 
         #endregion
     }
