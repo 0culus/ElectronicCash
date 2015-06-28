@@ -54,8 +54,6 @@ namespace ElectronicCash
             Ledger.Add(new Guid(), MoneyOrders);
         }
 
-        #region private methods
-
         /// <summary>
         /// Create N identity string pairs
         /// Placeholder method for now just creates pairs of random bytes
@@ -77,7 +75,5 @@ namespace ElectronicCash
 
             return pairs;
         } 
-
-        #endregion
     }
 }
