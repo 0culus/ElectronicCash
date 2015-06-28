@@ -11,17 +11,12 @@ namespace ElectronicCash.Tests
     {
         //static readonly Guid actorGuid = new Guid();
         readonly Alice _testActor = new Alice("Jane Doe", 4, new Guid(), "JaneDoe;10Downing");
-        [Test]
-        public void DummyTest()
-        {
-            Assert.True(true);
-        }
 
         [Test]
         public void OnConstructionNoAlicePropertiesShouldBeNull()
         {
             Assert.IsNotNull(_testActor.Name);
-            Assert.IsNotNull(_testActor.NumOrders);
+            //Assert.IsNotNull(_testActor.NumOrders); Int32 not nullable so does not fail
             Assert.IsNotNull(_testActor.Amount);
             Assert.IsNotNull(_testActor.ActorGuid);
             Assert.IsNotNull(_testActor.PersonalData);

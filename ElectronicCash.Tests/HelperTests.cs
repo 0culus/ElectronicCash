@@ -9,12 +9,6 @@ namespace ElectronicCash.Tests
         const string Test = "ThisIsAnAwesomeString";
 
         [Test]
-        public void DummyTest()
-        {
-            Assert.True(true);
-        }
-
-        [Test]
         public void GetBytesGivenString_ShouldYieldNonNullByteArray()
         {
             var result = Helpers.GetBytes(Test);
