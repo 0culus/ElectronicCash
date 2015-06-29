@@ -20,6 +20,9 @@ namespace BitCommitment
             AliceMessageBytesBytes = messageBytes;
         }
 
-
+        public byte[] BitCommitMessage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
