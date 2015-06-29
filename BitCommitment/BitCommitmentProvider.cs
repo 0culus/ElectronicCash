@@ -4,8 +4,8 @@ namespace BitCommitment
 {
     /// <summary>
     /// A class to perform bit commitment. It does not care what the input is; it's just a 
-    /// facility for exchanging bit commitment messages. Based on Bruce Schneier's RandBytes1-way 
-    /// function method for committing bits
+    /// facility for exchanging bit commitment messages. Based on Bruce Schneier's one-way 
+    /// function method for committing bits. See p.87 of `Applied Cryptography`.
     /// </summary>
     public class BitCommitmentProvider
     {
