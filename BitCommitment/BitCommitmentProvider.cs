@@ -4,20 +4,22 @@ namespace BitCommitment
 {
     /// <summary>
     /// A class to perform bit commitment. It does not care what the input is; it's just a 
-    /// facility for exchanging bit commitment messages. Based on Bruce Schneier's one-way 
+    /// facility for exchanging bit commitment messages. Based on Bruce Schneier's RandBytes1-way 
     /// function method for committing bits
     /// </summary>
     public class BitCommitmentProvider
     {
         public byte[] AliceRandBytes1 { get; set; }
         public byte[] AliceRandBytes2 { get; set; }
-        public byte[] AliceMessageBytesBytes { get; set; }
+        public byte[] AliceBytesToCommitBytesToCommit { get; set; }
 
-        public BitCommitmentProvider(byte[] one, byte[] two, byte[] messageBytes)
+        public BitCommitmentProvider(byte[] randBytes1, 
+            byte[] randBytes2, 
+            byte[] bytesToCommit)
         {
-            AliceRandBytes1 = one;
-            AliceRandBytes2 = two;
-            AliceMessageBytesBytes = messageBytes;
+            AliceRandBytes1 = randBytes1;
+            AliceRandBytes2 = randBytes2;
+            AliceBytesToCommitBytesToCommit = bytesToCommit;
         }
 
         public byte[] BitCommitMessage()
