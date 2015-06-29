@@ -31,5 +31,21 @@ namespace ElectronicCash
             Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
             return new string(chars);
         }
+
+        /// <summary>
+        /// A simple way to concatenate byte arrays. See http://stackoverflow.com/a/415396. Used for
+        /// bit commitment.
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static byte[] ConcatByteArrays(byte[] left, byte[] right)
+        {
+            var concatenated = new byte[left.Length + right.Length];
+            Buffer.BlockCopy(left, 0, concatenated, 0, left.Length);
+            Buffer.BlockCopy(right, 0, concatenated, left.Length, right.Length);
+
+            return concatenated;
+        }
     }
 }

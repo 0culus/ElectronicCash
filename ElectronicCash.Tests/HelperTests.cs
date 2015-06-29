@@ -7,6 +7,9 @@ namespace ElectronicCash.Tests
     internal class HelperTests
     {
         const string Test = "ThisIsAnAwesomeString";
+        const string BitCommitTest1 = "TheQuickBrownFox";
+        const string BitCommitTest2 = "JumpedOverMyCar";
+        private const string BitcommitTest3 = "TheQuickBrownFoxJumpedOverMyCar";
 
         [Test]
         public void GetBytesGivenString_ShouldYieldNonNullByteArray()
@@ -33,6 +36,30 @@ namespace ElectronicCash.Tests
             var fromBytes = Helpers.GetString(result);
 
             Assert.AreEqual(fromBytes, Test);
+        }
+
+        [Test]
+        public void ConcatByteArrays_ShouldYieldSameBytesConcatenated()
+        {
+            var left = Helpers.GetBytes(BitCommitTest1);
+            var right = Helpers.GetBytes(BitCommitTest2);
+            var compare = Helpers.GetBytes(BitcommitTest3);
+            var result = Helpers.ConcatByteArrays(left, right);
+
+            Assert.AreEqual(result, compare);
+        }
+
+        [Test]
+        public void ConcatByteArrays_ShouldYieldSameStringsConcatenated()
+        {
+            var left = Helpers.GetBytes(BitCommitTest1);
+            var right = Helpers.GetBytes(BitCommitTest2);
+            var compare = Helpers.GetBytes(BitcommitTest3);
+            var result = Helpers.ConcatByteArrays(left, right);
+
+            var resultString = Helpers.GetString(result);
+
+            Assert.AreEqual(resultString, BitcommitTest3);
         }
 
         [STAThread]
