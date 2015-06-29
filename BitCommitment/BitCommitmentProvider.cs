@@ -7,13 +7,13 @@ namespace BitCommitment
     /// facility for exchanging bit commitment messages. Based on Bruce Schneier's one-way 
     /// function method for committing bits
     /// </summary>
-    public class BitCommitmentEngine
+    public class BitCommitmentProvider
     {
         public byte[] AliceRandBytes1 { get; set; }
         public byte[] AliceRandBytes2 { get; set; }
         public byte[] AliceMessageBytesBytes { get; set; }
 
-        public BitCommitmentEngine(byte[] one, byte[] two, byte[] messageBytes)
+        public BitCommitmentProvider(byte[] one, byte[] two, byte[] messageBytes)
         {
             AliceRandBytes1 = one;
             AliceRandBytes2 = two;
