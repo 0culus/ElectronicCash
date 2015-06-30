@@ -27,9 +27,9 @@ namespace ElectronicCash.Tests
         [Test]
         public void CreateMoneyOrders_AmountShouldEqualGivenAmount()
         {
-            _testActor.CreateMoneyOrders(500);
+            _testActor.CreateMoneyOrders(500m);
 
-            Assert.AreEqual(500, _testActor.Amount);
+            Assert.AreEqual(500m, _testActor.Amount);
         }
     }
 }

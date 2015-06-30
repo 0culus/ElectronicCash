@@ -9,11 +9,11 @@ namespace ElectronicCash
     [Serializable]
     public class MoneyOrder
     {
-        public string Amount { get; set; }
+        public decimal Amount { get; set; }
         public byte[] UniquenessString { get; set; }
         public List<IdentityStringPair<byte[]>> NIdPairs { get; set; }
 
-        public MoneyOrder(string amount,
+        public MoneyOrder(decimal amount,
             byte[] uniquenessString,
             List<IdentityStringPair<byte[]>> nIdPairs)
         {

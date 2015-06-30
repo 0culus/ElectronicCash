@@ -10,7 +10,7 @@ namespace ElectronicCash
     {
         public string Name { get; protected set; }
         public Guid ActorGuid { get; protected set; }
-        public int Money { get; protected set; }
+        public decimal Money { get; protected set; }
         public Dictionary<Guid, List<MoneyOrder>> Ledger { get; protected set; }
     }
 }

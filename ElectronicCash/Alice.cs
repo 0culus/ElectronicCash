@@ -11,7 +11,7 @@ namespace ElectronicCash
     {
         public List<MoneyOrder> MoneyOrders { get; private set; }
         public int NumOrders { get; set; }
-        public int Amount { get; set; }
+        public decimal Amount { get; set; }
         public string PersonalData { get; private set; }
         public byte[] PersonalDataBytes { get; private set; }
 
@@ -20,7 +20,7 @@ namespace ElectronicCash
             Name = name;
             NumOrders = numOrders;
             ActorGuid = actorGuid;
-            Money = 1000;
+            Money = 1000m;
             PersonalData = personalData;
             PersonalDataBytes = Helpers.GetBytes(personalData);
             Ledger = new Dictionary<Guid, List<MoneyOrder>>();
@@ -29,7 +29,7 @@ namespace ElectronicCash
         /// <summary>
         /// Called every time the customer wants to pay for something
         /// </summary>
-        public void CreateMoneyOrders(int amount)
+        public void CreateMoneyOrders(decimal amount)
         {
             Amount = amount;
             MoneyOrders = new List<MoneyOrder>();
@@ -46,7 +46,7 @@ namespace ElectronicCash
                 //var idPairs = CreateIdStringPairs(PersonalDataBytes);
                 // TODO: once done testing, change back to use our personal data
                 var idPairs = CreateIdStringPairs(testBytes);
-                var currentMoneyOrder = new MoneyOrder(Amount.ToString(), uniquenessString.ToByteArray(), idPairs);
+                var currentMoneyOrder = new MoneyOrder(Amount, uniquenessString.ToByteArray(), idPairs);
                 MoneyOrders.Add(currentMoneyOrder);
             }
 
@@ -65,7 +65,7 @@ namespace ElectronicCash
         {
             var pairs = new List<IdentityStringPair<byte[]>>();
 
-            // this loop for testing purposes only
+            // TODO: this loop for testing purposes only
             for (var i = 0; i < NumOrders; i++)
             {
                 var reverse = personalDataBytes.Reverse().ToArray();
