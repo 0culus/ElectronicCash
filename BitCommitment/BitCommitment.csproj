@@ -42,6 +42,12 @@
     <Compile Include="BitCommitmentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElectronicCash\ElectronicCash.csproj">
+      <Project>{91a0a127-3470-47eb-9855-864acb4a22fb}</Project>
+      <Name>ElectronicCash</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
