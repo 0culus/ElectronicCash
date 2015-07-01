@@ -40,9 +40,9 @@ namespace BitCommitment
             var b = Helpers.GetString(AliceBytesToCommitB);
             var hashProvider = SHA256.Create();
 
-            var message = hashProvider.ComputeHash(Helpers.GetBytes(r1 + r2 + b));
+            var hashedMessage = hashProvider.ComputeHash(Helpers.GetBytes(r1 + r2 + b));
 
-            return (message);
+            return (hashedMessage);
         }
     }
 }
