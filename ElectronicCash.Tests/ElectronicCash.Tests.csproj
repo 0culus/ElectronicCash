@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AliceTests.cs" />
+    <Compile Include="BitCommitmentTests.cs" />
     <Compile Include="HelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BitCommitment\BitCommitment.csproj">
+      <Project>{6a4ebff0-6d7d-4bef-bd8a-ec255bd108ee}</Project>
+      <Name>BitCommitment</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ElectronicCash\ElectronicCash.csproj">
       <Project>{91A0A127-3470-47EB-9855-864ACB4A22FB}</Project>
       <Name>ElectronicCash</Name>

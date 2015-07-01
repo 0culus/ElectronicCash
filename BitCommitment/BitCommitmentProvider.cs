@@ -1,4 +1,5 @@
 ﻿using System;
+using ElectronicCash;
 
 namespace BitCommitment
 {
@@ -30,7 +31,16 @@ namespace BitCommitment
         /// <returns></returns>
         public byte[] BitCommitMessage()
         {
-            throw new NotImplementedException();
+            // HACK HACK HACK so I guess for now, my understanding of bit commitment is that you concatenate
+            // perhaps XOR is intended? Schneier is not clear.
+            // TODO: figure out how this actually is supposed to work
+            var r1 = Helpers.GetString(AliceRandBytesR1);
+            var r2 = Helpers.GetString(AliceRandBytesR2);
+            var b = Helpers.GetString(AliceBytesToCommitB);
+
+            var message = r1 + r2 + b;
+
+            return Helpers.GetBytes(message);
         }
     }
 }
