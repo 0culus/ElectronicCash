@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using ElectronicCash;
 
 namespace BitCommitment
@@ -37,10 +38,11 @@ namespace BitCommitment
             var r1 = Helpers.GetString(AliceRandBytesR1);
             var r2 = Helpers.GetString(AliceRandBytesR2);
             var b = Helpers.GetString(AliceBytesToCommitB);
+            var hashProvider = SHA256.Create();
 
-            var message = r1 + r2 + b;
+            var message = hashProvider.ComputeHash(Helpers.GetBytes(r1 + r2 + b));
 
-            return Helpers.GetBytes(message);
+            return (message);
         }
     }
 }
