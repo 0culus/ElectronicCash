@@ -27,9 +27,9 @@ namespace BitCommitment
         /// <summary>
         /// Returns a byte array containing the one way function computed for the triple
         /// (R_1, R_2, B) where R_1 is AliceRandBytesR1, R_2 is AliceRandBytesR2, and B is the byte(s) 
-        /// Alice wants to commit. 
+        /// Alice wants to commit.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The SHA256 hash of the message</returns>
         public byte[] BitCommitMessage()
         {
             // HACK HACK HACK so I guess for now, my understanding of bit commitment is that you concatenate

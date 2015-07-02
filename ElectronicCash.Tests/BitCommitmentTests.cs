@@ -11,7 +11,7 @@ namespace ElectronicCash.Tests
         readonly string message = "TheseAreRandomByteswithMoreRandomBytesAndBitCommitment";
 
         [Test]
-        public void OnBitCommitment_OutputStringShouldMatchInputConcatenated()
+        public void OnBitCommitment_OutputHashShouldMatchMessageHash()
         {
             var r1 = Helpers.GetBytes("TheseAreRandomBytes");
             var r2 = Helpers.GetBytes("withMoreRandomBytes");
