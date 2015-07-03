@@ -8,7 +8,7 @@ namespace ElectronicCash.Tests
     [TestFixture]
     class BitCommitmentTests
     {
-        readonly string message = "TheseAreRandomByteswithMoreRandomBytesAndBitCommitment";
+        private const string Message = "TheseAreRandomByteswithMoreRandomBytesAndBitCommitment";
 
         [Test]
         public void OnBitCommitment_OutputHashShouldMatchMessageHash()
@@ -19,7 +19,7 @@ namespace ElectronicCash.Tests
             var hashProvider = SHA256.Create();
 
             var committer = new BitCommitmentProvider(r1, r2, b);
-            var hashed = hashProvider.ComputeHash(Helpers.GetBytes(message));
+            var hashed = hashProvider.ComputeHash(Helpers.GetBytes(Message));
 
             Assert.AreEqual(committer.BitCommitMessage(), hashed);
         }
