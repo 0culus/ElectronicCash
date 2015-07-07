@@ -21,12 +21,12 @@ namespace ElectronicCash
         /// Splitting between an arbitrary number of actors
         /// </summary>
         /// <param name="secretMessage"></param>
-        /// <param name="randMessageBytes"></param>
+        /// <param name="randMessagesBytes"></param>
         public SecretSplittingProvider(byte[] secretMessage, 
-            IEnumerable<byte[]> randMessageBytes)
+            IEnumerable<byte[]> randMessagesBytes)
         {
             SecretMessage = secretMessage;
-            RandomBytes = new List<byte[]>(randMessageBytes);
+            RandomBytes = new List<byte[]>(randMessagesBytes);
         }
 
         /// <summary>
