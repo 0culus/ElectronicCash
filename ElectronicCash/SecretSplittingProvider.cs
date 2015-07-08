@@ -48,6 +48,7 @@ namespace ElectronicCash
         /// Compute XOR of an arbitrary number of byte arrays
         /// </summary>
         /// <param name="toXor"></param>
+        /// <exception cref="NotImplementedException"></exception>
         /// <returns></returns>
         private static byte[] ExclusiveOr(List<byte[]> toXor)
         {
@@ -64,6 +65,7 @@ namespace ElectronicCash
         /// </summary>
         /// <param name="arr1"></param>
         /// <param name="arr2"></param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         private static byte[] ExclusiveOr(byte[] arr1, byte[] arr2)
         {
