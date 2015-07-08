@@ -10,11 +10,11 @@ namespace ElectronicCash
     /// This portion of the protocol is critical...Alice splits her bit committed packets so that
     /// they are not accessible except when the bank requires it. Property names reflect
     /// </summary>
-    class SecretSplittingProvider
+    public class SecretSplittingProvider
     {
         List<byte[]> ListRandomBytes { get; set; }
-        byte[] R { get; set; }
-        byte[] S { get; set; }
+        public byte[] R { get; set; }
+        public byte[] S { get; set; }
         private byte[] SecretMessage { get; set; }
 
         /// <summary>
