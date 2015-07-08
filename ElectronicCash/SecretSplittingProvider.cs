@@ -29,11 +29,10 @@ namespace ElectronicCash
         }
 
         /// <summary>
-        /// Splitting between two actors
+        /// Secret splitting between two actors. Page 70 of Applied Cryptography
         /// </summary>
         /// <param name="secretMessage"></param>
-        /// <param name="randomBytes</param>
-        /// <param name="randomBytesTwo"></param>
+        /// <param name="randomBytes"></param>
         public SecretSplittingProvider(byte[] secretMessage, byte[] randomBytes)
         {
             SecretMessage = secretMessage;
