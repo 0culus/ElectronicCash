@@ -12,9 +12,8 @@ namespace ElectronicCash
     /// </summary>
     class SecretSplittingProvider
     {
-        List<byte[]> RandomBytes { get; set; }
-        byte[] RandomOne { get; set; }
-        byte[] RandomTwo { get; set; }
+        List<byte[]> ListRandomBytes { get; set; }
+        byte[] RandomBytes { get; set; }
         private byte[] SecretMessage { get; set; }
 
         /// <summary>
@@ -26,22 +25,19 @@ namespace ElectronicCash
             IEnumerable<byte[]> randMessagesBytes)
         {
             SecretMessage = secretMessage;
-            RandomBytes = new List<byte[]>(randMessagesBytes);
+            ListRandomBytes = new List<byte[]>(randMessagesBytes);
         }
 
         /// <summary>
         /// Splitting between two actors
         /// </summary>
         /// <param name="secretMessage"></param>
-        /// <param name="randomBytesOne"></param>
+        /// <param name="randomBytes</param>
         /// <param name="randomBytesTwo"></param>
-        public SecretSplittingProvider(byte[] secretMessage, 
-            byte[] randomBytesOne, 
-            byte[] randomBytesTwo)
+        public SecretSplittingProvider(byte[] secretMessage, byte[] randomBytes)
         {
             SecretMessage = secretMessage;
-            RandomOne = randomBytesOne;
-            RandomTwo = randomBytesTwo;
+            RandomBytes = randomBytes;
         }
 
         /// <summary>
