@@ -8,12 +8,13 @@ namespace ElectronicCash
 {
     /// <summary>
     /// This portion of the protocol is critical...Alice splits her bit committed packets so that
-    /// they are not accessible except when the bank requires it. 
+    /// they are not accessible except when the bank requires it. Property names reflect
     /// </summary>
     class SecretSplittingProvider
     {
         List<byte[]> ListRandomBytes { get; set; }
-        byte[] RandomBytes { get; set; }
+        byte[] R { get; set; }
+        byte[] S { get; set; }
         private byte[] SecretMessage { get; set; }
 
         /// <summary>
@@ -32,11 +33,20 @@ namespace ElectronicCash
         /// Secret splitting between two actors. Page 70 of Applied Cryptography
         /// </summary>
         /// <param name="secretMessage"></param>
-        /// <param name="randomBytes"></param>
-        public SecretSplittingProvider(byte[] secretMessage, byte[] randomBytes)
+        /// <param name="r"></param>
+        public SecretSplittingProvider(byte[] secretMessage, byte[] r)
         {
             SecretMessage = secretMessage;
-            RandomBytes = randomBytes;
+            R = r;
+        }
+
+        /// <summary>
+        /// Here we actually do the split. R goes to one actor; S goes to the other. Both actors,
+        /// then, must XOR their pieces to recover SecretMessage (M).
+        /// </summary>
+        public void SplitSecretBetweenTwoPeople()
+        {
+            S = ExclusiveOr(SecretMessage, R);
         }
 
         /// <summary>
