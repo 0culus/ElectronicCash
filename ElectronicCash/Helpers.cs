@@ -63,5 +63,29 @@ namespace ElectronicCash
 
             return data;
         }
+
+        /// <summary>
+        /// Compute XOR of two byte arrays
+        /// </summary>
+        /// <param name="arr1"></param>
+        /// <param name="arr2"></param>
+        /// <exception cref="ArgumentException"></exception>
+        /// <returns></returns>
+        public static byte[] ExclusiveOr(byte[] arr1, byte[] arr2)
+        {
+            if (arr1.Length != arr2.Length)
+            {
+                throw new ArgumentException("arr1 and arr2 must be the same length");
+            }
+
+            var result = new byte[arr1.Length];
+
+            for (var i = 0; i < arr1.Length; ++i)
+            {
+                result[i] = (byte)(arr1[i] ^ arr2[i]);
+            }
+
+            return result;
+        }
     }
 }
