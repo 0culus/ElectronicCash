@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 namespace ElectronicCash
 {
@@ -46,6 +47,21 @@ namespace ElectronicCash
             Buffer.BlockCopy(right, 0, concatenated, left.Length, right.Length);
 
             return concatenated;
+        }
+
+        /// <summary>
+        /// Return a specific number of random bytes, in a byte array
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static byte[] GetRandomBytes(int length)
+        {
+            var rnd = new RNGCryptoServiceProvider();
+
+            var data = new byte[length];
+            rnd.GetBytes(data);
+
+            return data;
         }
     }
 }
