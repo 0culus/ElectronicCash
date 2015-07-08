@@ -5,9 +5,9 @@ namespace ElectronicCash.Tests
     [TestFixture]
     class SecretSplittingTests
     {
-        private static readonly byte[] _message = Helpers.GetBytes("Supersecretmessage");
-        private static readonly byte[] _randBytes = Helpers.GetRandomBytes(Helpers.GetString(_message).Length * sizeof(char));
-        private readonly SecretSplittingProvider _splitter = new SecretSplittingProvider(_message, _randBytes);
+        private static readonly byte[] Message = Helpers.GetBytes("Supersecretmessage");
+        private static readonly byte[] RandBytes = Helpers.GetRandomBytes(Helpers.GetString(Message).Length * sizeof(char));
+        private readonly SecretSplittingProvider _splitter = new SecretSplittingProvider(Message, RandBytes);
 
         [Test]
         public void OnSplit_OriginalMessageShouldBeRecoverable()
@@ -19,7 +19,7 @@ namespace ElectronicCash.Tests
 
             var m = Helpers.ExclusiveOr(r, s);
 
-            Assert.AreEqual(Helpers.GetString(m), Helpers.GetString(_message));
+            Assert.AreEqual(Helpers.GetString(m), Helpers.GetString(Message));
         }
     }
 }
