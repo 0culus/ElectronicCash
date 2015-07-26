@@ -16,15 +16,9 @@ namespace ElectronicCash
             _right = right;
         }
 
-        public T Left
-        {
-            get { return _left; }
-        }
+        public T Left => _left;
 
-        public T Right
-        {
-            get { return _right; }
-        }
+        public T Right => _right;
 
         public IEnumerator<T> GetEnumerator()
         {
