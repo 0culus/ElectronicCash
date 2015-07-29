@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ElectronicCash
+namespace SecretSplitting
 {
     /// <summary>
     /// This portion of the protocol is critical...Alice splits her bit committed packets so that

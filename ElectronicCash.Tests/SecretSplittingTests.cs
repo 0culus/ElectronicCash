@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using SecretSplitting;
 
 namespace ElectronicCash.Tests
 {
