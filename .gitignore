@@ -4,6 +4,9 @@
 # class diagrams; these can be generated quite easily
 *.cd
 
+# code maps; these can also be generated
+*.dgml
+
 # User-specific files
 *.suo
 *.user
