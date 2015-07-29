@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicCash.Tests", "Ele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitCommitment", "BitCommitment\BitCommitment.csproj", "{6A4EBFF0-6D7D-4BEF-BD8A-EC255BD108EE}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ElectronicCash.Models", "ElectronicCash.Models\ElectronicCash.Models.modelproj", "{1638100F-50A2-4AA4-81A6-DA9FF72FC7EA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicCash.Form", "ElectronicCash.Form\ElectronicCash.Form.csproj", "{A5D1781B-663C-45B0-A81A-068EAB6FF6BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretSplitting", "SecretSplitting\SecretSplitting.csproj", "{BAB41B24-A6D9-48E4-BF8B-68E1EBBF5E40}"
@@ -33,10 +31,6 @@ Global
 		{6A4EBFF0-6D7D-4BEF-BD8A-EC255BD108EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A4EBFF0-6D7D-4BEF-BD8A-EC255BD108EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A4EBFF0-6D7D-4BEF-BD8A-EC255BD108EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1638100F-50A2-4AA4-81A6-DA9FF72FC7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1638100F-50A2-4AA4-81A6-DA9FF72FC7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1638100F-50A2-4AA4-81A6-DA9FF72FC7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1638100F-50A2-4AA4-81A6-DA9FF72FC7EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5D1781B-663C-45B0-A81A-068EAB6FF6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5D1781B-663C-45B0-A81A-068EAB6FF6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5D1781B-663C-45B0-A81A-068EAB6FF6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
