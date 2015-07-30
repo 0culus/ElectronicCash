@@ -7,7 +7,7 @@ namespace ElectronicCash
     /// <summary>
     /// Store the components of the customer's name
     /// </summary>
-    internal struct Name
+    public struct Name
     {
         private readonly string _firstName;
         private readonly string _middleName;
@@ -31,7 +31,7 @@ namespace ElectronicCash
     /// <summary>
     /// Store the components of the customer's street address
     /// </summary>
-    internal struct StreetAddress
+    public struct StreetAddress
     {
         private readonly string _road;
         private readonly string _cityState;
@@ -63,7 +63,7 @@ namespace ElectronicCash
     /// <summary>
     /// Deal with customer data for serialization to JSON
     /// </summary>
-    internal class CustomerData
+    public class CustomerData
     {
         public Name CustomerName { get; set; } 
         public string Email { get; set; }
