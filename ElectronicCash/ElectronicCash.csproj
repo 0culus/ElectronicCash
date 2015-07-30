@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Alice.cs" />
     <Compile Include="BaseActor.cs" />
+    <Compile Include="CustomerData.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="IdentityStringPair.cs" />
     <Compile Include="MoneyOrder.cs" />
