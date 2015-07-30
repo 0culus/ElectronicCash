@@ -84,17 +84,17 @@ namespace ElectronicCash.Tests
             Assert.IsFalse(isThereException);
         }
 
-        [Test]
-        public void OnDeserialization_ObjectFieldsShouldMatchOriginalObject()
-        {
-            var serialized = _customerData.GetCustomerDataJson(_customerData);
-            var deserialized = _customerData.GetCustomerDataObject(serialized);
+        //[Test]
+        //public void OnDeserialization_ObjectPropertiesShouldMatchOriginalObjectProperties()
+        //{
+        //    var serialized = _customerData.GetCustomerDataJson(_customerData);
+        //    var deserialized = _customerData.GetCustomerDataObject(serialized);
 
-            Assert.AreEqual(_customerData.CustomerName, deserialized.CustomerName);
-            Assert.AreEqual(_customerData.Email, deserialized.Email);
-            Assert.AreEqual(_customerData.CreatedDateTime, deserialized.CreatedDateTime);
-            Assert.AreEqual(_customerData.CustomerGuid, deserialized.CustomerGuid);
-            Assert.AreEqual(_customerData.CustomerStreetAddress, deserialized.CustomerStreetAddress);
-        }
+        //    Assert.AreEqual(_customerData.CustomerName, deserialized.CustomerName);
+        //    Assert.AreEqual(_customerData.Email, deserialized.Email);
+        //    Assert.AreEqual(_customerData.CreatedDateTime, deserialized.CreatedDateTime);
+        //    Assert.AreEqual(_customerData.CustomerGuid, deserialized.CustomerGuid);
+        //    Assert.AreEqual(_customerData.CustomerStreetAddress, deserialized.CustomerStreetAddress);
+        //}
     }
 }
