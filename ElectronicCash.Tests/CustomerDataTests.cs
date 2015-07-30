@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
 
@@ -67,8 +69,32 @@ namespace ElectronicCash.Tests
         public void OnSerialization_OutputShouldBeValidJson()
         {
             var serialized = _customerData.GetCustomerDataJson(_customerData);
+            var isThereException = false;
 
-            var testRead = 
+            try
+            {
+                var testRead = JToken.Parse(serialized);
+            }
+            catch (JsonReaderException e)
+            {
+                Console.WriteLine(e.Message);
+                isThereException = true;
+            }
+
+            Assert.IsFalse(isThereException);
+        }
+
+        [Test]
+        public void OnDeserialization_ObjectFieldsShouldMatchOriginalObject()
+        {
+            var serialized = _customerData.GetCustomerDataJson(_customerData);
+            var deserialized = _customerData.GetCustomerDataObject(serialized);
+
+            Assert.AreEqual(_customerData.CustomerName, deserialized.CustomerName);
+            Assert.AreEqual(_customerData.Email, deserialized.Email);
+            Assert.AreEqual(_customerData.CreatedDateTime, deserialized.CreatedDateTime);
+            Assert.AreEqual(_customerData.CustomerGuid, deserialized.CustomerGuid);
+            Assert.AreEqual(_customerData.CustomerStreetAddress, deserialized.CustomerStreetAddress);
         }
     }
 }
