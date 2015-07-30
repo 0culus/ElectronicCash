@@ -70,7 +70,7 @@ namespace ElectronicCash
         public StreetAddress CustomerStreetAddress { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public Guid CustomerGuid { get; set; }
-        public string CustomerDataJson { get; set; }
+        //public string CustomerDataJson { get; set; }
 
         public CustomerData(Name customerName, string email, StreetAddress customerStreetStreetAddress,
             DateTime createdDateTime, Guid customerGuid)
