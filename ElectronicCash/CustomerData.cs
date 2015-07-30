@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ElectronicCash
 {
@@ -88,7 +89,43 @@ namespace ElectronicCash
         /// <returns></returns>
         public string GetCustomerDataJson(CustomerData toSerialize)
         {
-            return JsonConvert.SerializeObject(toSerialize, Formatting.Indented);
+            string serialized = null;
+
+            try
+            {
+                serialized = JsonConvert.SerializeObject(toSerialize, Formatting.Indented);
+            }
+            catch (JsonSerializationException e)
+            {
+
+                Console.WriteLine(e.Message);
+                return null;
+            }
+
+            return serialized;
+        }
+
+        /// <summary>
+        /// Return deserialized CustomerData object from JSON
+        /// </summary>
+        /// <param name="jsonCustomerDataObject"></param>
+        /// <returns></returns>
+        public CustomerData GetCustomerDataObject(string jsonCustomerDataObject)
+        {
+            try
+            {
+                var obj = JToken.Parse(jsonCustomerDataObject);
+            }
+            catch (JsonReaderException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return JsonConvert.DeserializeObject<CustomerData>(jsonCustomerDataObject);
         }
     }
 }
