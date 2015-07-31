@@ -63,7 +63,9 @@
     <Compile Include="Helpers.cs" />
     <Compile Include="IdentityStringPair.cs" />
     <Compile Include="MoneyOrder.cs" />
+    <Compile Include="ActorName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreetAddress.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

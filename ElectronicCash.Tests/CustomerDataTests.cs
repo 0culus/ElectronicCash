@@ -9,31 +9,31 @@ namespace ElectronicCash.Tests
     class CustomerDataTests
     {
         //private static DateTime _dateTime = new DateTime();
-        private static readonly Name CustomerName = new Name("Elmer", "T.", "Fudd", "Mr.");
-        private static readonly Name StoreName = new Name("Fudd's Bunny Shop");
+        private static readonly ActorName CustomerActorName = new ActorName("Elmer", "T.", "Fudd", "Mr.");
+        private static readonly ActorName StoreActorName = new ActorName("Fudd's Bunny Shop");
         private static readonly StreetAddress CustomerAddress = new StreetAddress("20 Bunny Rd.", "Rabbits, Rabbitville", "12345");
-        private readonly CustomerData _customerData = new CustomerData(CustomerName, "fudd@bunny.xyz", 
+        private readonly CustomerData _customerData = new CustomerData(CustomerActorName, "fudd@bunny.xyz", 
             CustomerAddress, DateTime.UtcNow, new Guid());
 
         [Test]
         public void OnNameConstruction_NameShouldNotBeNull()
         {
-            Assert.IsNotNull(CustomerName);
+            Assert.IsNotNull(CustomerActorName);
         }
 
         [Test]
         public void OnPersonNameConstruction_NamePropertiesShouldNotBeNull()
         {
-            Assert.IsNotNull(CustomerName.FirstName);
-            Assert.IsNotNull(CustomerName.MiddleName);
-            Assert.IsNotNull(CustomerName.LastName);
-            Assert.IsNotNull(CustomerName.Title);
+            Assert.IsNotNull(CustomerActorName.FirstName);
+            Assert.IsNotNull(CustomerActorName.MiddleName);
+            Assert.IsNotNull(CustomerActorName.LastName);
+            Assert.IsNotNull(CustomerActorName.Title);
         }
 
         [Test]
         public void OnEntityNameConstruction_EntityNameShouldNotBeNull()
         {
-            Assert.IsNotNull(StoreName.EntityName);
+            Assert.IsNotNull(StoreActorName.EntityName);
         }
 
         [Test]
@@ -61,7 +61,7 @@ namespace ElectronicCash.Tests
         {
             Assert.IsNotNull(_customerData.CreatedDateTime);
             Assert.IsNotNull(_customerData.CustomerGuid);
-            Assert.IsNotNull(_customerData.CustomerName);
+            Assert.IsNotNull(_customerData.CustomerActorName);
             Assert.IsNotNull(_customerData.CustomerStreetAddress);
             Assert.IsNotNull(_customerData.Email);
             Assert.IsNotNull(_customerData.CreatedDateTime);
@@ -93,7 +93,7 @@ namespace ElectronicCash.Tests
         //    var serialized = _customerData.GetCustomerDataJson(_customerData);
         //    var deserialized = _customerData.GetCustomerDataObject(serialized);
 
-        //    Assert.AreEqual(_customerData.CustomerName, deserialized.CustomerName);
+        //    Assert.AreEqual(_customerData.CustomerActorName, deserialized.CustomerActorName);
         //    Assert.AreEqual(_customerData.Email, deserialized.Email);
         //    Assert.AreEqual(_customerData.CreatedDateTime, deserialized.CreatedDateTime);
         //    Assert.AreEqual(_customerData.CustomerGuid, deserialized.CustomerGuid);

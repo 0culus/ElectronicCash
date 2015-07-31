@@ -10,7 +10,7 @@ namespace ElectronicCash.Tests
     class AliceTests
     {
         //static readonly Guid actorGuid = new Guid();
-        static readonly CustomerData Data = new CustomerData(new Name("Elmer", "T.", "Fudd", "Mr"), 
+        static readonly CustomerData Data = new CustomerData(new ActorName("Elmer", "T.", "Fudd", "Mr"), 
             "fudd@bunny.xyz", new StreetAddress("20 Bunny Rd.", "Rabbits, Rabbitville", "12345"), 
             DateTime.UtcNow, new Guid());
         readonly Alice _testActor = new Alice(4, new Guid(), Data);
@@ -18,7 +18,7 @@ namespace ElectronicCash.Tests
         [Test]
         public void OnConstructionNoAlicePropertiesShouldBeNull()
         {
-            //Assert.IsNotNull(_testActor.Name);
+            //Assert.IsNotNull(_testActor.ActorName);
             //Assert.IsNotNull(_testActor.NumOrders); Int32 not nullable so does not fail
             Assert.IsNotNull(_testActor.Amount);
             Assert.IsNotNull(_testActor.ActorGuid);
