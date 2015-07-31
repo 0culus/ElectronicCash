@@ -20,7 +20,7 @@ namespace ElectronicCash
             ActorGuid = actorGuid;
             Money = 1000m;
             PersonalModel = personalModel;
-            PersonalDataBytes = Helpers.GetBytes(SerializeCustomerModel.GetCustomerDataJson(personalModel));
+            PersonalDataBytes = Helpers.GetBytes(SerializeCustomerModel.SerializeCustomerModelToJson(personalModel));
             Ledger = new Dictionary<Guid, List<MoneyOrder>>();
         }
 
