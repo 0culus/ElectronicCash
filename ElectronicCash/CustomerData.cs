@@ -131,10 +131,12 @@ namespace ElectronicCash
             catch (JsonReaderException e)
             {
                 Console.WriteLine(e.Message);
+                return null;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return null;
             }
 
             return JsonConvert.DeserializeObject<CustomerData>(jsonCustomerDataObject);
