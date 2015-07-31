@@ -95,15 +95,15 @@ namespace ElectronicCash
         /// <param name="instance"></param>
         public static void ToggleMemoryProtection(SecretSplittingProvider instance)
         {
-            if (!instance.IsProtected)
+            if (!instance.IsSecretMessageProtected)
             {
                 try
                 {
-                    ProtectedMemory.Protect(instance.SecretMessage, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Protect(instance.R, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Protect(instance.S, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Protect(instance.SecretMessage, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Protect(instance.R, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Protect(instance.S, MemoryProtectionScope.SameProcess);
 
-                    instance.IsProtected = true;
+                    instance.IsSecretMessageProtected = true;
                 }
                 catch (CryptographicException exception)
                 {
@@ -114,17 +114,29 @@ namespace ElectronicCash
             {
                 try
                 {
-                    ProtectedMemory.Unprotect(instance.SecretMessage, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Unprotect(instance.R, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Unprotect(instance.S, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Unprotect(instance.SecretMessage, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Unprotect(instance.R, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Unprotect(instance.S, MemoryProtectionScope.SameProcess);
 
-                    instance.IsProtected = false;
+                    instance.IsSecretMessageProtected = false;
                 }
                 catch (CryptographicException exception)
                 {
                     Console.WriteLine(exception.Message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Pad an array to the given multiple for use with crypto methods. See:
+        /// http://stackoverflow.com/a/1144881
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="pad"></param>
+        public static void PadArrayToMultipleOf(ref byte[] source, int pad)
+        {
+            var len = (source.Length + pad - 1) / pad * pad;
+            Array.Resize(ref source, len);
         }
     }
 }
