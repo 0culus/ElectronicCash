@@ -11,7 +11,7 @@ namespace ElectronicCash
         /// </summary>
         /// <param name="toSerialize"></param>
         /// <returns></returns>
-        public static string GetCustomerDataJson(CustomerModel toSerialize)
+        public static string SerializeCustomerModelToJson(CustomerModel toSerialize)
         {
             string serialized = null;
 
@@ -34,7 +34,7 @@ namespace ElectronicCash
         /// </summary>
         /// <param name="jsonCustomerDataObject"></param>
         /// <returns></returns>
-        public static CustomerModel GetCustomerDataObject(string jsonCustomerDataObject)
+        public static CustomerModel DeserializeCustomerModelFromJson(string jsonCustomerDataObject)
         {
             try
             {

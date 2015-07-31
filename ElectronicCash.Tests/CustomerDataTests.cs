@@ -70,7 +70,7 @@ namespace ElectronicCash.Tests
         [Test]
         public void OnSerialization_OutputShouldBeValidJson()
         {
-            var serialized = SerializeCustomerModel.GetCustomerDataJson(_customerModel);
+            var serialized = SerializeCustomerModel.SerializeCustomerModelToJson(_customerModel);
             var isThereException = false;
 
             try
@@ -90,8 +90,8 @@ namespace ElectronicCash.Tests
         //[Test]
         //public void OnDeserialization_ObjectPropertiesShouldMatchOriginalObjectProperties()
         //{
-        //    var serialized = _customerModel.GetCustomerDataJson(_customerModel);
-        //    var deserialized = _customerModel.GetCustomerDataObject(serialized);
+        //    var serialized = _customerModel.SerializeCustomerModelToJson(_customerModel);
+        //    var deserialized = _customerModel.DeserializeCustomerModelFromJson(serialized);
 
         //    Assert.AreEqual(_customerModel.Name, deserialized.Name);
         //    Assert.AreEqual(_customerModel.Email, deserialized.Email);
