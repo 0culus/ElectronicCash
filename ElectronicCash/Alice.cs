@@ -14,13 +14,13 @@ namespace ElectronicCash
         public decimal Amount { get; set; }
         public byte[] PersonalDataBytes { get; private set; }
 
-        public Alice(int numOrders, Guid actorGuid, CustomerData personalData)
+        public Alice(int numOrders, Guid actorGuid, CustomerModel personalModel)
         {
             NumOrders = numOrders;
             ActorGuid = actorGuid;
             Money = 1000m;
-            PersonalData = personalData;
-            PersonalDataBytes = Helpers.GetBytes(personalData.GetCustomerDataJson(personalData));
+            PersonalModel = personalModel;
+            PersonalDataBytes = Helpers.GetBytes(personalModel.GetCustomerDataJson(personalModel));
             Ledger = new Dictionary<Guid, List<MoneyOrder>>();
         }
 

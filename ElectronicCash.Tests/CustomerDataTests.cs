@@ -12,7 +12,7 @@ namespace ElectronicCash.Tests
         private static readonly ActorName CustomerActorName = new ActorName("Elmer", "T.", "Fudd", "Mr.");
         private static readonly ActorName StoreActorName = new ActorName("Fudd's Bunny Shop");
         private static readonly StreetAddress CustomerAddress = new StreetAddress("20 Bunny Rd.", "Rabbits, Rabbitville", "12345");
-        private readonly CustomerData _customerData = new CustomerData(CustomerActorName, "fudd@bunny.xyz", 
+        private readonly CustomerModel _customerModel = new CustomerModel(CustomerActorName, "fudd@bunny.xyz", 
             CustomerAddress, DateTime.UtcNow, new Guid());
 
         [Test]
@@ -53,24 +53,24 @@ namespace ElectronicCash.Tests
         [Test]
         public void OnConstruction_CustomerDataObjectShouldNotBeNull()
         {
-            Assert.IsNotNull(_customerData);
+            Assert.IsNotNull(_customerModel);
         }
 
         [Test]
         public void OnConstruction_CustomerDataPropertiesShouldNotBeNull()
         {
-            Assert.IsNotNull(_customerData.CreatedDateTime);
-            Assert.IsNotNull(_customerData.CustomerGuid);
-            Assert.IsNotNull(_customerData.CustomerActorName);
-            Assert.IsNotNull(_customerData.CustomerStreetAddress);
-            Assert.IsNotNull(_customerData.Email);
-            Assert.IsNotNull(_customerData.CreatedDateTime);
+            Assert.IsNotNull(_customerModel.CreatedDateTime);
+            Assert.IsNotNull(_customerModel.CustomerGuid);
+            Assert.IsNotNull(_customerModel.CustomerActorName);
+            Assert.IsNotNull(_customerModel.CustomerStreetAddress);
+            Assert.IsNotNull(_customerModel.Email);
+            Assert.IsNotNull(_customerModel.CreatedDateTime);
         }
 
         [Test]
         public void OnSerialization_OutputShouldBeValidJson()
         {
-            var serialized = _customerData.GetCustomerDataJson(_customerData);
+            var serialized = _customerModel.GetCustomerDataJson(_customerModel);
             var isThereException = false;
 
             try
@@ -86,18 +86,18 @@ namespace ElectronicCash.Tests
             Assert.IsFalse(isThereException);
         }
 
-        // TODO: override Equals for CustomerData so that this test can work
+        // TODO: override Equals for CustomerModel so that this test can work
         //[Test]
         //public void OnDeserialization_ObjectPropertiesShouldMatchOriginalObjectProperties()
         //{
-        //    var serialized = _customerData.GetCustomerDataJson(_customerData);
-        //    var deserialized = _customerData.GetCustomerDataObject(serialized);
+        //    var serialized = _customerModel.GetCustomerDataJson(_customerModel);
+        //    var deserialized = _customerModel.GetCustomerDataObject(serialized);
 
-        //    Assert.AreEqual(_customerData.CustomerActorName, deserialized.CustomerActorName);
-        //    Assert.AreEqual(_customerData.Email, deserialized.Email);
-        //    Assert.AreEqual(_customerData.CreatedDateTime, deserialized.CreatedDateTime);
-        //    Assert.AreEqual(_customerData.CustomerGuid, deserialized.CustomerGuid);
-        //    Assert.AreEqual(_customerData.CustomerStreetAddress, deserialized.CustomerStreetAddress);
+        //    Assert.AreEqual(_customerModel.CustomerActorName, deserialized.CustomerActorName);
+        //    Assert.AreEqual(_customerModel.Email, deserialized.Email);
+        //    Assert.AreEqual(_customerModel.CreatedDateTime, deserialized.CreatedDateTime);
+        //    Assert.AreEqual(_customerModel.CustomerGuid, deserialized.CustomerGuid);
+        //    Assert.AreEqual(_customerModel.CustomerStreetAddress, deserialized.CustomerStreetAddress);
         //}
     }
 }
