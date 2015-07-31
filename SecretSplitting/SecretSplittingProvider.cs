@@ -47,6 +47,7 @@ namespace SecretSplitting
         public void SplitSecretBetweenTwoPeople()
         {
             S = ExclusiveOr(SecretMessage, R);
+            ToggleMemoryProtect();
         }
 
         /// <summary>
