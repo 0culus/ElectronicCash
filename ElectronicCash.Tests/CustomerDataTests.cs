@@ -86,6 +86,7 @@ namespace ElectronicCash.Tests
             Assert.IsFalse(isThereException);
         }
 
+        // TODO: override Equals for CustomerData so that this test can work
         //[Test]
         //public void OnDeserialization_ObjectPropertiesShouldMatchOriginalObjectProperties()
         //{
