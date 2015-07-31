@@ -15,7 +15,7 @@ namespace SecretSplitting
         List<byte[]> ListRandomBytes { get; set; }
         public byte[] R { get; set; }
         public byte[] S { get; set; }
-        private byte[] SecretMessage { get; set; }
+        private byte[] SecretMessage { get; }
 
         /// <summary>
         /// Splitting between an arbitrary number of actors
@@ -89,11 +89,40 @@ namespace SecretSplitting
             return result;
         }
 
-        public void MemoryProtect()
+        /// <summary>
+        /// Toggles memory protection for the properties in this class
+        /// </summary>
+        public void ToggleMemoryProtect()
         {
             if (!_isProtected)
             {
-                ProtectedMemory.Protect(SecretMessage, MemoryProtectionScope.SameLogon);
+                try
+                {
+                    ProtectedMemory.Protect(SecretMessage, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Protect(R, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Protect(S, MemoryProtectionScope.SameLogon);
+
+                    _isProtected = true;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ProtectedMemory.Unprotect(SecretMessage, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Unprotect(R, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Unprotect(S, MemoryProtectionScope.SameLogon);
+
+                    _isProtected = false;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
             }
         }
     }
