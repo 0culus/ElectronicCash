@@ -15,23 +15,30 @@ namespace ElectronicCash.Tests
     {
         //private static DateTime _dateTime = new DateTime();
         private static readonly Name CustomerName = new Name("Elmer", "T.", "Fudd", "Mr.");
+        private static readonly Name StoreName = new Name("Fudd's Bunny Shop");
         private static readonly StreetAddress CustomerAddress = new StreetAddress("20 Bunny Rd.", "Rabbits, Rabbitville", "12345");
         private readonly CustomerData _customerData = new CustomerData(CustomerName, "fudd@bunny.xyz", 
             CustomerAddress, DateTime.UtcNow, new Guid());
 
         [Test]
-        public void OnConstruction_NameShouldNotBeNull()
+        public void OnNameConstruction_NameShouldNotBeNull()
         {
             Assert.IsNotNull(CustomerName);
         }
 
         [Test]
-        public void OnConstruction_NamePropertiesShouldNotBeNull()
+        public void OnPersonNameConstruction_NamePropertiesShouldNotBeNull()
         {
             Assert.IsNotNull(CustomerName.FirstName);
             Assert.IsNotNull(CustomerName.MiddleName);
             Assert.IsNotNull(CustomerName.LastName);
             Assert.IsNotNull(CustomerName.Title);
+        }
+
+        [Test]
+        public void OnEntityNameConstruction_EntityNameShouldNotBeNull()
+        {
+            Assert.IsNotNull(StoreName.EntityName);
         }
 
         [Test]
