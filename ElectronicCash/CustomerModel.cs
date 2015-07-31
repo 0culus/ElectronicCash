@@ -9,11 +9,17 @@ namespace ElectronicCash
     /// </summary>
     public class CustomerModel
     {
+        private readonly SerializeCustomerModel _serializeCustomerModel;
         public ActorName Name { get; set; } 
         public string Email { get; set; }
         public StreetAddress CustomerStreetAddress { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public Guid Id { get; set; }
+
+        public SerializeCustomerModel SerializeCustomerModel
+        {
+            get { return _serializeCustomerModel; }
+        }
 
         public CustomerModel(ActorName name, string email, StreetAddress customerStreetStreetAddress,
             DateTime createdDateTime, Guid id)
@@ -23,54 +29,7 @@ namespace ElectronicCash
             CustomerStreetAddress = customerStreetStreetAddress;
             CreatedDateTime = createdDateTime;
             Id = id;
-        }
-
-        /// <summary>
-        /// Return pretty-printed JSON serialized form of the instance of CustomerModel passed in
-        /// </summary>
-        /// <param name="toSerialize"></param>
-        /// <returns></returns>
-        public string GetCustomerDataJson(CustomerModel toSerialize)
-        {
-            string serialized = null;
-
-            try
-            {
-                serialized = JsonConvert.SerializeObject(toSerialize, Formatting.Indented);
-            }
-            catch (JsonSerializationException e)
-            {
-
-                Console.WriteLine(e.Message);
-                return null;
-            }
-
-            return serialized;
-        }
-
-        /// <summary>
-        /// Return deserialized CustomerModel object from JSON
-        /// </summary>
-        /// <param name="jsonCustomerDataObject"></param>
-        /// <returns></returns>
-        public CustomerModel GetCustomerDataObject(string jsonCustomerDataObject)
-        {
-            try
-            {
-                var obj = JToken.Parse(jsonCustomerDataObject);
-            }
-            catch (JsonReaderException e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-            }
-
-            return JsonConvert.DeserializeObject<CustomerModel>(jsonCustomerDataObject);
+            _serializeCustomerModel = new SerializeCustomerModel();
         }
     }
 }

@@ -70,7 +70,7 @@ namespace ElectronicCash.Tests
         [Test]
         public void OnSerialization_OutputShouldBeValidJson()
         {
-            var serialized = _customerModel.GetCustomerDataJson(_customerModel);
+            var serialized = SerializeCustomerModel.GetCustomerDataJson(_customerModel);
             var isThereException = false;
 
             try
