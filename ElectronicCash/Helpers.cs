@@ -132,10 +132,10 @@ namespace ElectronicCash
         /// http://stackoverflow.com/a/1144881
         /// </summary>
         /// <param name="source"></param>
-        /// <param name="pad"></param>
-        public static void PadArrayToMultipleOf(ref byte[] source, int pad)
+        /// <param name="multiple"></param>
+        public static void PadArrayToMultipleOf(ref byte[] source, int multiple)
         {
-            var len = (source.Length + pad - 1) / pad * pad;
+            var len = (source.Length + multiple - 1) / multiple * multiple;
             Array.Resize(ref source, len);
         }
     }
