@@ -62,6 +62,24 @@ namespace ElectronicCash.Tests
             Assert.AreEqual(resultString, BitcommitTest3);
         }
 
+        [Test]
+        public void OnPad_ArrayLenShouldBeMultipleOfGivenInt()
+        {
+            var test = Helpers.GetBytes(BitcommitTest3);
+            var testLen = Test.Length;
+            var isMultipleOf = false;
+            const int multiple = 16;
+
+            Helpers.PadArrayToMultipleOf(ref test, multiple);
+
+            if ((test.Length % multiple) == 0)
+            {
+                isMultipleOf = true;
+            }
+
+            Assert.IsTrue(isMultipleOf);
+        }
+
         [STAThread]
         private static void Main()
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using SecretSplitting;
 
 namespace ElectronicCash
 {
@@ -86,6 +87,56 @@ namespace ElectronicCash
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Provide toggling of memory protection for instances of SecretSplittingProvider
+        /// </summary>
+        /// <param name="instance"></param>
+        public static void ToggleMemoryProtection(SecretSplittingProvider instance)
+        {
+            if (!instance.IsSecretMessageProtected)
+            {
+                try
+                {
+                    ProtectedMemory.Protect(instance.SecretMessage, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Protect(instance.R, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Protect(instance.S, MemoryProtectionScope.SameProcess);
+
+                    instance.IsSecretMessageProtected = true;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ProtectedMemory.Unprotect(instance.SecretMessage, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Unprotect(instance.R, MemoryProtectionScope.SameProcess);
+                    ProtectedMemory.Unprotect(instance.S, MemoryProtectionScope.SameProcess);
+
+                    instance.IsSecretMessageProtected = false;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Pad an array to the given multiple for use with crypto methods. See:
+        /// http://stackoverflow.com/a/1144881
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="multiple"></param>
+        public static void PadArrayToMultipleOf(ref byte[] source, int multiple)
+        {
+            var len = (source.Length + multiple - 1) / multiple * multiple;
+            Array.Resize(ref source, len);
         }
     }
 }

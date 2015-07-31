@@ -12,17 +12,15 @@ namespace ElectronicCash
         public List<MoneyOrder> MoneyOrders { get; private set; }
         public int NumOrders { get; set; }
         public decimal Amount { get; set; }
-        public string PersonalData { get; private set; }
         public byte[] PersonalDataBytes { get; private set; }
 
-        public Alice(string name, int numOrders, Guid actorGuid, string personalData)
+        public Alice(int numOrders, Guid actorGuid, CustomerModel personalModel)
         {
-            Name = name;
             NumOrders = numOrders;
             ActorGuid = actorGuid;
             Money = 1000m;
-            PersonalData = personalData;
-            PersonalDataBytes = Helpers.GetBytes(personalData);
+            PersonalModel = personalModel;
+            PersonalDataBytes = Helpers.GetBytes(SerializeCustomerModel.GetCustomerDataJson(personalModel));
             Ledger = new Dictionary<Guid, List<MoneyOrder>>();
         }
 
