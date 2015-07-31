@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 namespace ElectronicCash
 {
     /// <summary>
-    /// Store the components of the customer's name
+    /// Store the components of the customer's or entity's name
     /// </summary>
     public struct Name
     {
@@ -41,7 +41,7 @@ namespace ElectronicCash
     }
 
     /// <summary>
-    /// Store the components of the customer's street address
+    /// Store the components of the customer's or entity's street address
     /// </summary>
     public struct StreetAddress
     {
