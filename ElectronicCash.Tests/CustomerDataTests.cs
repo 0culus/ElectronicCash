@@ -60,7 +60,7 @@ namespace ElectronicCash.Tests
         public void OnConstruction_CustomerDataPropertiesShouldNotBeNull()
         {
             Assert.IsNotNull(_customerModel.CreatedDateTime);
-            Assert.IsNotNull(_customerModel.CustomerGuid);
+            Assert.IsNotNull(_customerModel.Id);
             Assert.IsNotNull(_customerModel.Name);
             Assert.IsNotNull(_customerModel.CustomerStreetAddress);
             Assert.IsNotNull(_customerModel.Email);
@@ -96,7 +96,7 @@ namespace ElectronicCash.Tests
         //    Assert.AreEqual(_customerModel.Name, deserialized.Name);
         //    Assert.AreEqual(_customerModel.Email, deserialized.Email);
         //    Assert.AreEqual(_customerModel.CreatedDateTime, deserialized.CreatedDateTime);
-        //    Assert.AreEqual(_customerModel.CustomerGuid, deserialized.CustomerGuid);
+        //    Assert.AreEqual(_customerModel.Id, deserialized.Id);
         //    Assert.AreEqual(_customerModel.CustomerStreetAddress, deserialized.CustomerStreetAddress);
         //}
     }

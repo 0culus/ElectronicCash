@@ -13,17 +13,16 @@ namespace ElectronicCash
         public string Email { get; set; }
         public StreetAddress CustomerStreetAddress { get; set; }
         public DateTime CreatedDateTime { get; set; }
-        public Guid CustomerGuid { get; set; }
-        //public string CustomerDataJson { get; set; }
+        public Guid Id { get; set; }
 
         public CustomerModel(ActorName name, string email, StreetAddress customerStreetStreetAddress,
-            DateTime createdDateTime, Guid customerGuid)
+            DateTime createdDateTime, Guid id)
         {
             Name = name;
             Email = email;
             CustomerStreetAddress = customerStreetStreetAddress;
             CreatedDateTime = createdDateTime;
-            CustomerGuid = customerGuid;
+            Id = id;
         }
 
         /// <summary>
