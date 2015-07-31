@@ -1,4 +1,6 @@
-﻿namespace ElectronicCash
+﻿using System;
+
+namespace ElectronicCash
 {
     public struct ActorName
     {
@@ -10,6 +12,19 @@
 
         public ActorName(string firstName, string middleName, string lastName, string title)
         {
+            if (string.IsNullOrEmpty(firstName))
+            {
+                throw new ArgumentException("First name must not be empty");
+            }
+            if (string.IsNullOrEmpty(middleName))
+            {
+                throw new ArgumentException("Middle name must not be empty");
+            }
+            if (string.IsNullOrEmpty(lastName))
+            {
+                throw new ArgumentException("Last name must not be empty");
+            }
+
             _firstName = firstName;
             _middleName = middleName;
             _lastName = lastName;
@@ -19,6 +34,11 @@
 
         public ActorName(string entityName)
         {
+            if (string.IsNullOrEmpty(entityName))
+            {
+                throw new ArgumentException("Entity name must be provided");
+            }
+
             _firstName = null;
             _middleName = null;
             _lastName = null;
