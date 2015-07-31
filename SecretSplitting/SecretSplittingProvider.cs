@@ -10,12 +10,12 @@ namespace SecretSplitting
     /// </summary>
     public class SecretSplittingProvider
     {
-        private bool _isProtected = false;
+        public bool IsProtected;
 
         List<byte[]> ListRandomBytes { get; set; }
         public byte[] R { get; set; }
         public byte[] S { get; set; }
-        private byte[] SecretMessage { get; }
+        public byte[] SecretMessage { get; }
 
         /// <summary>
         /// Splitting between an arbitrary number of actors
@@ -26,6 +26,7 @@ namespace SecretSplitting
             IEnumerable<byte[]> randMessagesBytes)
         {
             SecretMessage = secretMessage;
+            IsProtected = false;
             ListRandomBytes = new List<byte[]>(randMessagesBytes);
         }
 
@@ -37,6 +38,7 @@ namespace SecretSplitting
         public SecretSplittingProvider(byte[] secretMessage, byte[] r)
         {
             SecretMessage = secretMessage;
+            IsProtected = false;
             R = r;
         }
 
@@ -47,7 +49,7 @@ namespace SecretSplitting
         public void SplitSecretBetweenTwoPeople()
         {
             S = ExclusiveOr(SecretMessage, R);
-            if (!_isProtected)
+            if (!IsProtected)
             {
                 ToggleMemoryProtect(); 
             }
@@ -98,7 +100,7 @@ namespace SecretSplitting
         /// </summary>
         public void ToggleMemoryProtect()
         {
-            if (!_isProtected)
+            if (!IsProtected)
             {
                 try
                 {
@@ -106,7 +108,7 @@ namespace SecretSplitting
                     ProtectedMemory.Protect(R, MemoryProtectionScope.SameLogon);
                     ProtectedMemory.Protect(S, MemoryProtectionScope.SameLogon);
 
-                    _isProtected = true;
+                    IsProtected = true;
                 }
                 catch (CryptographicException exception)
                 {
@@ -121,7 +123,7 @@ namespace SecretSplitting
                     ProtectedMemory.Unprotect(R, MemoryProtectionScope.SameLogon);
                     ProtectedMemory.Unprotect(S, MemoryProtectionScope.SameLogon);
 
-                    _isProtected = false;
+                    IsProtected = false;
                 }
                 catch (CryptographicException exception)
                 {
