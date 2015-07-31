@@ -61,7 +61,7 @@ namespace ElectronicCash.Tests
         {
             Assert.IsNotNull(_customerModel.CreatedDateTime);
             Assert.IsNotNull(_customerModel.CustomerGuid);
-            Assert.IsNotNull(_customerModel.CustomerActorName);
+            Assert.IsNotNull(_customerModel.Name);
             Assert.IsNotNull(_customerModel.CustomerStreetAddress);
             Assert.IsNotNull(_customerModel.Email);
             Assert.IsNotNull(_customerModel.CreatedDateTime);
@@ -93,7 +93,7 @@ namespace ElectronicCash.Tests
         //    var serialized = _customerModel.GetCustomerDataJson(_customerModel);
         //    var deserialized = _customerModel.GetCustomerDataObject(serialized);
 
-        //    Assert.AreEqual(_customerModel.CustomerActorName, deserialized.CustomerActorName);
+        //    Assert.AreEqual(_customerModel.Name, deserialized.Name);
         //    Assert.AreEqual(_customerModel.Email, deserialized.Email);
         //    Assert.AreEqual(_customerModel.CreatedDateTime, deserialized.CreatedDateTime);
         //    Assert.AreEqual(_customerModel.CustomerGuid, deserialized.CustomerGuid);
