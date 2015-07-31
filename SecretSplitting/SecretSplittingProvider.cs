@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace SecretSplitting
 {
@@ -9,6 +10,8 @@ namespace SecretSplitting
     /// </summary>
     public class SecretSplittingProvider
     {
+        private bool _isProtected = false;
+
         List<byte[]> ListRandomBytes { get; set; }
         public byte[] R { get; set; }
         public byte[] S { get; set; }
@@ -84,6 +87,14 @@ namespace SecretSplitting
             }
 
             return result;
+        }
+
+        public void MemoryProtect()
+        {
+            if (!_isProtected)
+            {
+                ProtectedMemory.Protect(SecretMessage, MemoryProtectionScope.SameLogon);
+            }
         }
     }
 }
