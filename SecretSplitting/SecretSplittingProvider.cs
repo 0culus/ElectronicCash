@@ -1,5 +1,8 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.Dynamic;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 
 namespace SecretSplitting
@@ -10,24 +13,30 @@ namespace SecretSplitting
     /// </summary>
     public class SecretSplittingProvider
     {
-        public bool IsProtected;
+        public bool IsSecretMessageProtected = false;
+        public bool IsRProtected = false;
+        public bool IsSProtected = false;
+
+        private const int PaddingForMemoryProtect = 16;
 
         List<byte[]> ListRandomBytes { get; set; }
         public byte[] R { get; set; }
-        public byte[] S { get; set; }
+        public byte[] S { get; set;  }
         public byte[] SecretMessage { get; }
+        
 
         /// <summary>
-        /// Splitting between an arbitrary number of actors
+        /// Secret splitting between an aribtrary number of actors. Not currently implemented.
         /// </summary>
         /// <param name="secretMessage"></param>
         /// <param name="randMessagesBytes"></param>
         public SecretSplittingProvider(byte[] secretMessage, 
             IEnumerable<byte[]> randMessagesBytes)
         {
-            SecretMessage = secretMessage;
-            IsProtected = false;
-            ListRandomBytes = new List<byte[]>(randMessagesBytes);
+            //SecretMessage = secretMessage;
+            //IsSecretMessageProtected = false;
+            //ListRandomBytes = new List<byte[]>(randMessagesBytes);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -38,8 +47,13 @@ namespace SecretSplitting
         public SecretSplittingProvider(byte[] secretMessage, byte[] r)
         {
             SecretMessage = secretMessage;
-            IsProtected = false;
             R = r;
+
+            SecretMessage = PadArrayToMultipleOf(SecretMessage, PaddingForMemoryProtect);
+            R = PadArrayToMultipleOf(R, PaddingForMemoryProtect);
+
+            ToggleMemoryProtect(SecretMessage, ref IsSecretMessageProtected);
+            ToggleMemoryProtect(R, ref IsRProtected);
         }
 
         /// <summary>
@@ -48,10 +62,21 @@ namespace SecretSplitting
         /// </summary>
         public void SplitSecretBetweenTwoPeople()
         {
-            S = ExclusiveOr(SecretMessage, R);
-            if (!IsProtected)
+            if (!IsSecretMessageProtected && !IsRProtected)
             {
-                ToggleMemoryProtect(); 
+                S = ExclusiveOr(SecretMessage, R);
+                S = PadArrayToMultipleOf(S, PaddingForMemoryProtect);
+                ToggleMemoryProtect(S, ref IsSProtected);
+            }
+            else
+            {
+                ToggleMemoryProtect(SecretMessage, ref IsSecretMessageProtected);
+                ToggleMemoryProtect(R, ref IsRProtected);
+
+                S = ExclusiveOr(SecretMessage, R);
+                ToggleMemoryProtect(S, ref IsSProtected);
+                ToggleMemoryProtect(SecretMessage, ref IsSecretMessageProtected);
+                ToggleMemoryProtect(R, ref IsRProtected);
             }
         }
 
@@ -96,19 +121,18 @@ namespace SecretSplitting
         }
 
         /// <summary>
-        /// Toggles memory protection for the properties in this class
+        /// Provides toggling of memory protection for the byte[] passed in
         /// </summary>
-        public void ToggleMemoryProtect()
+        /// <param name="toProtectBytes"></param>
+        /// <param name="flag"></param>
+        private static void ToggleMemoryProtect(byte[] toProtectBytes, ref bool flag)
         {
-            if (!IsProtected)
+            if (!flag)
             {
                 try
                 {
-                    ProtectedMemory.Protect(SecretMessage, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Protect(R, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Protect(S, MemoryProtectionScope.SameLogon);
-
-                    IsProtected = true;
+                    ProtectedMemory.Protect(toProtectBytes, MemoryProtectionScope.SameProcess);
+                    flag = true;
                 }
                 catch (CryptographicException exception)
                 {
@@ -119,17 +143,31 @@ namespace SecretSplitting
             {
                 try
                 {
-                    ProtectedMemory.Unprotect(SecretMessage, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Unprotect(R, MemoryProtectionScope.SameLogon);
-                    ProtectedMemory.Unprotect(S, MemoryProtectionScope.SameLogon);
-
-                    IsProtected = false;
+                    ProtectedMemory.Unprotect(toProtectBytes, MemoryProtectionScope.SameProcess);
+                    flag = false;
                 }
                 catch (CryptographicException exception)
                 {
                     Console.WriteLine(exception.Message);
                 }
             }
+        }
+
+        /// <summary>
+        /// Pad an array to the given multiple for use with crypto methods. See:
+        /// http://stackoverflow.com/a/1144881
+        /// This one doesn't use pass-by-reference, unlike the version in the Helpers class.
+        /// Since the <c>ProtectedMemory</c> methods require that the arrays be multiples of 16, we need to pad. 
+        /// This is also convenient for other byte array operations.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="pad"></param>
+        private static byte[] PadArrayToMultipleOf(byte[] source, int pad)
+        {
+            var len = (source.Length + pad - 1) / pad * pad;
+            Array.Resize(ref source, len);
+
+            return source;
         }
     }
 }
