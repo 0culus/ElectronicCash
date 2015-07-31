@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using SecretSplitting;
 
 namespace ElectronicCash
 {
@@ -86,6 +87,44 @@ namespace ElectronicCash
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Provide toggling of memory protection for instances of SecretSplittingProvider
+        /// </summary>
+        /// <param name="instance"></param>
+        public static void ToggleMemoryProtection(SecretSplittingProvider instance)
+        {
+            if (!instance.IsProtected)
+            {
+                try
+                {
+                    ProtectedMemory.Protect(instance.SecretMessage, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Protect(instance.R, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Protect(instance.S, MemoryProtectionScope.SameLogon);
+
+                    instance.IsProtected = true;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ProtectedMemory.Unprotect(instance.SecretMessage, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Unprotect(instance.R, MemoryProtectionScope.SameLogon);
+                    ProtectedMemory.Unprotect(instance.S, MemoryProtectionScope.SameLogon);
+
+                    instance.IsProtected = false;
+                }
+                catch (CryptographicException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
         }
     }
 }
