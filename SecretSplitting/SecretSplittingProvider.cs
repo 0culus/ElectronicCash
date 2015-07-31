@@ -154,14 +154,14 @@ namespace SecretSplitting
         /// Pad an array to the given multiple for use with crypto methods. See:
         /// http://stackoverflow.com/a/1144881
         /// This one doesn't use pass-by-reference, unlike the version in the Helpers class.
-        /// Since the <c>ProtectedMemory</c> methods require that the arrays be multiples of 16, we need to pad. 
+        /// Since the <c>ProtectedMemory</c> methods require that the arrays be multiples of 16, we need to multiple. 
         /// This is also convenient for other byte array operations.
         /// </summary>
         /// <param name="source"></param>
-        /// <param name="pad"></param>
-        private static byte[] PadArrayToMultipleOf(byte[] source, int pad)
+        /// <param name="multiple"></param>
+        private static byte[] PadArrayToMultipleOf(byte[] source, int multiple)
         {
-            var len = (source.Length + pad - 1) / pad * pad;
+            var len = (source.Length + multiple - 1) / multiple * multiple;
             Array.Resize(ref source, len);
 
             return source;
