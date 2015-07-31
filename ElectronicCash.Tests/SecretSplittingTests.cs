@@ -22,5 +22,16 @@ namespace ElectronicCash.Tests
 
             Assert.AreEqual(Helpers.GetString(m), Helpers.GetString(Message));
         }
+
+        [Test]
+        public void OnSecretSplit_FlagsShouldBeTrue()
+        {
+            var splitter = new SecretSplittingProvider(Message, RandBytes);
+            splitter.SplitSecretBetweenTwoPeople();
+            
+            Assert.IsTrue(splitter.IsRProtected);
+            Assert.IsTrue(splitter.IsSProtected);
+            Assert.IsTrue(splitter.IsSecretMessageProtected);   
+        }
     }
 }
